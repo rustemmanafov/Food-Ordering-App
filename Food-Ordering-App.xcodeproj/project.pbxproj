@@ -9,23 +9,41 @@
 /* Begin PBXBuildFile section */
 		46BB6E87288D64780083DA3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6E86288D64780083DA3D /* AppDelegate.swift */; };
 		46BB6E89288D64780083DA3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6E88288D64780083DA3D /* SceneDelegate.swift */; };
-		46BB6E8B288D64780083DA3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6E8A288D64780083DA3D /* ViewController.swift */; };
 		46BB6E8E288D64780083DA3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46BB6E8C288D64780083DA3D /* Main.storyboard */; };
 		46BB6E91288D64780083DA3D /* Food_Ordering_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6E8F288D64780083DA3D /* Food_Ordering_App.xcdatamodeld */; };
 		46BB6E93288D647A0083DA3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46BB6E92288D647A0083DA3D /* Assets.xcassets */; };
 		46BB6E96288D647A0083DA3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46BB6E94288D647A0083DA3D /* LaunchScreen.storyboard */; };
+		46BB6E9E288D69A40083DA3D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6E9D288D69A40083DA3D /* LoginViewController.swift */; };
+		46BB6EA0288D69B50083DA3D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6E9F288D69B50083DA3D /* RegisterViewController.swift */; };
+		46BB6EA2288D69D60083DA3D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EA1288D69D60083DA3D /* HomeViewController.swift */; };
+		46BB6EA4288D6A2F0083DA3D /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EA3288D6A2F0083DA3D /* OrdersViewController.swift */; };
+		46BB6EA6288D6A4C0083DA3D /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EA5288D6A4C0083DA3D /* OrderDetailViewController.swift */; };
+		46BB6EA8288D6A8E0083DA3D /* ListDishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EA7288D6A8E0083DA3D /* ListDishesViewController.swift */; };
+		46BB6EAA288D6B510083DA3D /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EA9288D6B510083DA3D /* ConfirmViewController.swift */; };
+		46BB6EAC288D6B650083DA3D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EAB288D6B650083DA3D /* MapViewController.swift */; };
+		46BB6EAE288D6B760083DA3D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EAD288D6B760083DA3D /* ProfileViewController.swift */; };
+		46BB6EB0288D6D990083DA3D /* RestoranDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EAF288D6D990083DA3D /* RestoranDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		46BB6E83288D64780083DA3D /* Food-Ordering-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food-Ordering-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BB6E86288D64780083DA3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46BB6E88288D64780083DA3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		46BB6E8A288D64780083DA3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		46BB6E8D288D64780083DA3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46BB6E90288D64780083DA3D /* Food_Ordering_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Food_Ordering_App.xcdatamodel; sourceTree = "<group>"; };
 		46BB6E92288D647A0083DA3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46BB6E95288D647A0083DA3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46BB6E97288D647A0083DA3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46BB6E9D288D69A40083DA3D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		46BB6E9F288D69B50083DA3D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		46BB6EA1288D69D60083DA3D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		46BB6EA3288D6A2F0083DA3D /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
+		46BB6EA5288D6A4C0083DA3D /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
+		46BB6EA7288D6A8E0083DA3D /* ListDishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDishesViewController.swift; sourceTree = "<group>"; };
+		46BB6EA9288D6B510083DA3D /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
+		46BB6EAB288D6B650083DA3D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		46BB6EAD288D6B760083DA3D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		46BB6EAF288D6D990083DA3D /* RestoranDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoranDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +78,16 @@
 			children = (
 				46BB6E86288D64780083DA3D /* AppDelegate.swift */,
 				46BB6E88288D64780083DA3D /* SceneDelegate.swift */,
-				46BB6E8A288D64780083DA3D /* ViewController.swift */,
+				46BB6E9D288D69A40083DA3D /* LoginViewController.swift */,
+				46BB6EA1288D69D60083DA3D /* HomeViewController.swift */,
+				46BB6EA3288D6A2F0083DA3D /* OrdersViewController.swift */,
+				46BB6EA5288D6A4C0083DA3D /* OrderDetailViewController.swift */,
+				46BB6EA7288D6A8E0083DA3D /* ListDishesViewController.swift */,
+				46BB6EA9288D6B510083DA3D /* ConfirmViewController.swift */,
+				46BB6EAB288D6B650083DA3D /* MapViewController.swift */,
+				46BB6EAD288D6B760083DA3D /* ProfileViewController.swift */,
+				46BB6E9F288D69B50083DA3D /* RegisterViewController.swift */,
+				46BB6EAF288D6D990083DA3D /* RestoranDetailsViewController.swift */,
 				46BB6E8C288D64780083DA3D /* Main.storyboard */,
 				46BB6E92288D647A0083DA3D /* Assets.xcassets */,
 				46BB6E94288D647A0083DA3D /* LaunchScreen.storyboard */,
@@ -141,10 +168,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46BB6E8B288D64780083DA3D /* ViewController.swift in Sources */,
+				46BB6EAC288D6B650083DA3D /* MapViewController.swift in Sources */,
+				46BB6EA6288D6A4C0083DA3D /* OrderDetailViewController.swift in Sources */,
+				46BB6E9E288D69A40083DA3D /* LoginViewController.swift in Sources */,
+				46BB6EA0288D69B50083DA3D /* RegisterViewController.swift in Sources */,
 				46BB6E87288D64780083DA3D /* AppDelegate.swift in Sources */,
+				46BB6EA4288D6A2F0083DA3D /* OrdersViewController.swift in Sources */,
+				46BB6EAE288D6B760083DA3D /* ProfileViewController.swift in Sources */,
+				46BB6EAA288D6B510083DA3D /* ConfirmViewController.swift in Sources */,
+				46BB6EA8288D6A8E0083DA3D /* ListDishesViewController.swift in Sources */,
 				46BB6E89288D64780083DA3D /* SceneDelegate.swift in Sources */,
+				46BB6EB0288D6D990083DA3D /* RestoranDetailsViewController.swift in Sources */,
 				46BB6E91288D64780083DA3D /* Food_Ordering_App.xcdatamodeld in Sources */,
+				46BB6EA2288D69D60083DA3D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
