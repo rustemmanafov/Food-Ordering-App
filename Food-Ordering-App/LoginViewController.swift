@@ -9,19 +9,22 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var nextBtnOutlet: UIButton!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signInOutlet: UIButton!
+    @IBOutlet weak var notRegisteredOutlet: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+    }
+    @IBAction func signInAct(_ sender: Any) {
     }
     
-
-    @IBAction func nextBtnAction(_ sender: Any) {
+    @IBAction func notRegisteredAct(_ sender: Any) {
     }
     
+   
 }

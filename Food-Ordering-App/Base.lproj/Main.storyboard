@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Onboarding View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="OnboardingViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,19 +22,26 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="686"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fwx-VQ-Dp8">
-                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="itemSize" width="413" height="683"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DEx-fR-0Ny">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingCollectionViewCell" id="DEx-fR-0Ny" customClass="OnboardingCollectionViewCell" customModule="Food_Ordering_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.5" y="0.0" width="413" height="683"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8iG-IJ-Ra1">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="413" height="683"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iPh-XE-J24">
+                                                    <rect key="frame" x="87" y="126" width="240" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="413" height="683"/>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -59,7 +66,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="nextBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ct-MM-EBW"/>
+                                    <action selector="nextBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5sp-Pv-MuE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -78,11 +85,64 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="EbU-i7-Slz" id="IMI-dr-HEv"/>
-                        <outlet property="nextBtnOutlet" destination="AMA-dm-RYB" id="aNi-A1-twv"/>
+                        <outlet property="nextBtnOutlet" destination="AMA-dm-RYB" id="iq4-O3-w3p"/>
                         <outlet property="pageControl" destination="a6O-7U-cRm" id="Ega-Y8-Bhe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1070" y="98"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="nms-5p-oVe">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="q7N-5V-Wzd" customClass="LoginViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ywd-zn-8qJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="74G-Gr-92j">
+                                <rect key="frame" x="20" y="305" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iNe-EL-E0s">
+                                <rect key="frame" x="20" y="364" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="017-nI-1bW">
+                                <rect key="frame" x="20" y="447" width="374" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign In"/>
+                                <connections>
+                                    <action selector="signInAct:" destination="q7N-5V-Wzd" eventType="touchUpInside" id="xZV-BQ-dgv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4l-WF-Wdy">
+                                <rect key="frame" x="20" y="509" width="374" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Not Registered"/>
+                                <connections>
+                                    <action selector="notRegisteredAct:" destination="q7N-5V-Wzd" eventType="touchUpInside" id="W8N-wk-kRv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Qu-l2-LCS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="74G-Gr-92j" id="rMB-mJ-YDE"/>
+                        <outlet property="notRegisteredOutlet" destination="L4l-WF-Wdy" id="kJl-WF-JVH"/>
+                        <outlet property="passwordTextField" destination="iNe-EL-E0s" id="J8t-Sa-Rd0"/>
+                        <outlet property="signInOutlet" destination="017-nI-1bW" id="qnA-te-9xa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WSb-XY-iOq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-349.27536231884062" y="97.767857142857139"/>
         </scene>
@@ -151,11 +211,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpAct:" destination="lpi-tM-V7C" eventType="touchUpInside" id="Ma3-hf-Q5C"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hQy-m1-BnQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="ageTextField" destination="xvt-bH-zvp" id="gbG-ls-zGH"/>
+                        <outlet property="emailTextField" destination="mpC-pr-VsQ" id="vbl-SN-Do7"/>
+                        <outlet property="firstNameTextField" destination="Tnd-cx-X5a" id="v6t-Wc-Hxw"/>
+                        <outlet property="genderTextField" destination="nVN-Uy-IPy" id="nr8-mu-7eP"/>
+                        <outlet property="lastNameTextField" destination="q82-vm-ROQ" id="hx4-aB-ZBp"/>
+                        <outlet property="passwordTextField" destination="Afg-U6-GiU" id="W68-jr-gIq"/>
+                        <outlet property="signUpTextField" destination="dcW-Ja-YR3" id="bBL-e2-a0K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khW-ak-eE0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
