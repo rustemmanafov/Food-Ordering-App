@@ -25,6 +25,8 @@
 		46BB6EB5288DD4500083DA3D /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EB4288DD4500083DA3D /* OnboardingCollectionViewCell.swift */; };
 		46BB6EB7288DD47C0083DA3D /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EB6288DD47C0083DA3D /* OnboardingViewController.swift */; };
 		46BB6EB9288DD6450083DA3D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EB8288DD6450083DA3D /* LoginViewController.swift */; };
+		46BB6EBB288DD91F0083DA3D /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EBA288DD91F0083DA3D /* OnboardingSlide.swift */; };
+		46BB6EBD288DE5580083DA3D /* Onboarding.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 46BB6EBC288DE5580083DA3D /* Onboarding.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		46BB6EB4288DD4500083DA3D /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		46BB6EB6288DD47C0083DA3D /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		46BB6EB8288DD6450083DA3D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		46BB6EBA288DD91F0083DA3D /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		46BB6EBC288DE5580083DA3D /* Onboarding.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Onboarding.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 				46BB6E94288D647A0083DA3D /* LaunchScreen.storyboard */,
 				46BB6E97288D647A0083DA3D /* Info.plist */,
 				46BB6E8F288D64780083DA3D /* Food_Ordering_App.xcdatamodeld */,
+				46BB6EBC288DE5580083DA3D /* Onboarding.jpg */,
 			);
 			path = "Food-Ordering-App";
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 			children = (
 				46BB6EB4288DD4500083DA3D /* OnboardingCollectionViewCell.swift */,
 				46BB6EB6288DD47C0083DA3D /* OnboardingViewController.swift */,
+				46BB6EBA288DD91F0083DA3D /* OnboardingSlide.swift */,
 			);
 			path = "Onboarding VC";
 			sourceTree = "<group>";
@@ -169,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46BB6EBD288DE5580083DA3D /* Onboarding.jpg in Resources */,
 				46BB6E96288D647A0083DA3D /* LaunchScreen.storyboard in Resources */,
 				46BB6E93288D647A0083DA3D /* Assets.xcassets in Resources */,
 				46BB6E8E288D64780083DA3D /* Main.storyboard in Resources */,
@@ -186,6 +193,7 @@
 				46BB6EA6288D6A4C0083DA3D /* OrderDetailViewController.swift in Sources */,
 				46BB6EA0288D69B50083DA3D /* RegisterViewController.swift in Sources */,
 				46BB6EB9288DD6450083DA3D /* LoginViewController.swift in Sources */,
+				46BB6EBB288DD91F0083DA3D /* OnboardingSlide.swift in Sources */,
 				46BB6E87288D64780083DA3D /* AppDelegate.swift in Sources */,
 				46BB6EB5288DD4500083DA3D /* OnboardingCollectionViewCell.swift in Sources */,
 				46BB6EA4288D6A2F0083DA3D /* OrdersViewController.swift in Sources */,
