@@ -86,18 +86,18 @@
 			children = (
 				46BB6E86288D64780083DA3D /* AppDelegate.swift */,
 				46BB6E88288D64780083DA3D /* SceneDelegate.swift */,
-				46BB6EA1288D69D60083DA3D /* HomeViewController.swift */,
-				46BB6EA3288D6A2F0083DA3D /* OrdersViewController.swift */,
-				46BB6EA5288D6A4C0083DA3D /* OrderDetailViewController.swift */,
-				46BB6EA7288D6A8E0083DA3D /* ListDishesViewController.swift */,
-				46BB6EA9288D6B510083DA3D /* ConfirmViewController.swift */,
-				46BB6EAB288D6B650083DA3D /* MapViewController.swift */,
-				46BB6EAD288D6B760083DA3D /* ProfileViewController.swift */,
-				46BB6E9F288D69B50083DA3D /* RegisterViewController.swift */,
-				46BB6EAF288D6D990083DA3D /* RestoranDetailsViewController.swift */,
-				46BB6EB8288DD6450083DA3D /* LoginViewController.swift */,
+				46BB6EC7288E015E0083DA3D /* ListDishes */,
+				46BB6EC6288E01470083DA3D /* ConfirmOrder */,
+				46BB6EC5288E01350083DA3D /* RestoranDetail */,
+				46BB6EC4288E01110083DA3D /* Login */,
+				46BB6EC3288E00E40083DA3D /* Profile */,
+				46BB6EC2288E00DB0083DA3D /* Home */,
+				46BB6EC1288E00BF0083DA3D /* Order */,
+				46BB6EC0288E00A70083DA3D /* Register */,
+				46BB6EBF288E00910083DA3D /* Map */,
 				46BB6EB3288DCC210083DA3D /* Onboarding VC */,
 				46BB6E8C288D64780083DA3D /* Main.storyboard */,
+				46BB6EBE288E00770083DA3D /* Model */,
 				46BB6E92288D647A0083DA3D /* Assets.xcassets */,
 				46BB6E94288D647A0083DA3D /* LaunchScreen.storyboard */,
 				46BB6E97288D647A0083DA3D /* Info.plist */,
@@ -112,9 +112,89 @@
 			children = (
 				46BB6EB4288DD4500083DA3D /* OnboardingCollectionViewCell.swift */,
 				46BB6EB6288DD47C0083DA3D /* OnboardingViewController.swift */,
-				46BB6EBA288DD91F0083DA3D /* OnboardingSlide.swift */,
 			);
 			path = "Onboarding VC";
+			sourceTree = "<group>";
+		};
+		46BB6EBE288E00770083DA3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				46BB6EBA288DD91F0083DA3D /* OnboardingSlide.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		46BB6EBF288E00910083DA3D /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				46BB6EAB288D6B650083DA3D /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		46BB6EC0288E00A70083DA3D /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				46BB6E9F288D69B50083DA3D /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		46BB6EC1288E00BF0083DA3D /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				46BB6EA3288D6A2F0083DA3D /* OrdersViewController.swift */,
+				46BB6EA5288D6A4C0083DA3D /* OrderDetailViewController.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		46BB6EC2288E00DB0083DA3D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				46BB6EA1288D69D60083DA3D /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		46BB6EC3288E00E40083DA3D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				46BB6EAD288D6B760083DA3D /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		46BB6EC4288E01110083DA3D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				46BB6EB8288DD6450083DA3D /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		46BB6EC5288E01350083DA3D /* RestoranDetail */ = {
+			isa = PBXGroup;
+			children = (
+				46BB6EAF288D6D990083DA3D /* RestoranDetailsViewController.swift */,
+			);
+			path = RestoranDetail;
+			sourceTree = "<group>";
+		};
+		46BB6EC6288E01470083DA3D /* ConfirmOrder */ = {
+			isa = PBXGroup;
+			children = (
+				46BB6EA9288D6B510083DA3D /* ConfirmViewController.swift */,
+			);
+			path = ConfirmOrder;
+			sourceTree = "<group>";
+		};
+		46BB6EC7288E015E0083DA3D /* ListDishes */ = {
+			isa = PBXGroup;
+			children = (
+				46BB6EA7288D6A8E0083DA3D /* ListDishesViewController.swift */,
+			);
+			path = ListDishes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -36,7 +36,7 @@ class OnboardingViewController: UIViewController {
     
 }
 
-extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension OnboardingViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         slides.count
     
