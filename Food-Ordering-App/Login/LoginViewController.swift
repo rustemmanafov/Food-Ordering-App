@@ -21,10 +21,13 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        signInOutlet.layer.cornerRadius = 10
         underlineButton()
-        
         jsonData = getDocumentsDirectoryUrl().appendingPathComponent("User.json")
 
+        // auto filling textfields when opening login view
+        emailTextField.text = "rustem@mail.com"
+        passwordTextField.text = "12345"
     }
     
     // Underline Button first code
