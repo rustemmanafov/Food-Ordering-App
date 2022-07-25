@@ -37,6 +37,8 @@
 		46BB6EDF288ED1630083DA3D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EDE288ED1630083DA3D /* SearchViewController.swift */; };
 		46BB6EE4288ED4400083DA3D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EE3288ED4400083DA3D /* TabBarViewController.swift */; };
 		46BB6EE8288F0F6A0083DA3D /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EE7288F0F6A0083DA3D /* StoreTableViewCell.swift */; };
+		46BB6EEC288F1B8A0083DA3D /* RestaurantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EEB288F1B8A0083DA3D /* RestaurantCollectionViewCell.swift */; };
+		46BB6EEE288F1BA40083DA3D /* DishesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EED288F1BA40083DA3D /* DishesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		46BB6EDE288ED1630083DA3D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		46BB6EE3288ED4400083DA3D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		46BB6EE7288F0F6A0083DA3D /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
+		46BB6EEB288F1B8A0083DA3D /* RestaurantCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCollectionViewCell.swift; sourceTree = "<group>"; };
+		46BB6EED288F1BA40083DA3D /* DishesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +267,8 @@
 			isa = PBXGroup;
 			children = (
 				46BB6EE7288F0F6A0083DA3D /* StoreTableViewCell.swift */,
+				46BB6EEB288F1B8A0083DA3D /* RestaurantCollectionViewCell.swift */,
+				46BB6EED288F1BA40083DA3D /* DishesCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -347,12 +353,14 @@
 				46BB6EE4288ED4400083DA3D /* TabBarViewController.swift in Sources */,
 				46BB6EA0288D69B50083DA3D /* RegisterViewController.swift in Sources */,
 				46BB6EB9288DD6450083DA3D /* LoginViewController.swift in Sources */,
+				46BB6EEC288F1B8A0083DA3D /* RestaurantCollectionViewCell.swift in Sources */,
 				46BB6EBB288DD91F0083DA3D /* OnboardingSlide.swift in Sources */,
 				46BB6ED7288E10AA0083DA3D /* DishesModel.swift in Sources */,
 				46BB6EC9288E08BB0083DA3D /* UserDefaults.swift in Sources */,
 				46BB6E87288D64780083DA3D /* AppDelegate.swift in Sources */,
 				46BB6EB5288DD4500083DA3D /* OnboardingCollectionViewCell.swift in Sources */,
 				46BB6EA4288D6A2F0083DA3D /* OrdersViewController.swift in Sources */,
+				46BB6EEE288F1BA40083DA3D /* DishesCollectionViewCell.swift in Sources */,
 				46BB6EB7288DD47C0083DA3D /* OnboardingViewController.swift in Sources */,
 				46BB6EAE288D6B760083DA3D /* ProfileViewController.swift in Sources */,
 				46BB6EAA288D6B510083DA3D /* ConfirmViewController.swift in Sources */,
