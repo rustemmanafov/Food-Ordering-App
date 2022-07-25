@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, RestaurantCollectionViewCellDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -36,6 +36,13 @@ class HomeViewController: UIViewController {
 
     }
     
+    func navigate(index: Int) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "ListDishesViewController") as! ListDishesViewController
+        controller.dishModel = restaurants[index].dishes
+        controller.title = restaurants[index].name
+        navigationController?.show(controller, sender: nil)
+    }
+    
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -50,11 +57,22 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.restaurantImage.image = UIImage(named: restaurants[indexPath.row].image)
         cell.restaurantName.text = restaurants[indexPath.row].name
         cell.restaurantDesc.text = restaurants[indexPath.row].description
+        
+        cell.delegate = self
+        cell.tag = indexPath.row
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: <#T##String#>)
+        let controller = storyboard?.instantiateViewController(withIdentifier: "ListDishesViewController") as! ListDishesViewController
+        
+        show(controller, sender: nil)
+    }
+    
+    func actionButtonCalled(index: Int) {
+       navigate(index: index)
+        
     }
     
 

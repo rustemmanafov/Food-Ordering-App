@@ -9,12 +9,18 @@ import UIKit
 
 class ListDishesViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var dishModel = [DishesModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+    }
+    
+  
     }
     
 
 
-}

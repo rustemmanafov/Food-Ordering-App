@@ -479,7 +479,7 @@
             </objects>
             <point key="canvasLocation" x="4278" y="-452"/>
         </scene>
-        <!--Stores-->
+        <!--Basket-->
         <scene sceneID="w7f-Vn-Qao">
             <objects>
                 <viewController storyboardIdentifier="OrdersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dNv-QS-EHd" customClass="OrdersViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -540,7 +540,7 @@
                             <constraint firstItem="NqL-ku-46H" firstAttribute="top" secondItem="Xqk-kR-VLq" secondAttribute="top" id="uoR-ww-f7m"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Stores" image="archivebox" catalog="system" id="UpO-Mi-NpL"/>
+                    <tabBarItem key="tabBarItem" title="Basket" image="archivebox" catalog="system" id="UpO-Mi-NpL"/>
                     <connections>
                         <outlet property="tableView" destination="NqL-ku-46H" id="RUa-2K-xi3"/>
                     </connections>
@@ -576,22 +576,58 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g5o-Y0-WhC">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KD5-Rb-Ee9">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KD5-Rb-Ee9">
+                                    <size key="itemSize" width="414" height="313"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cwb-eb-Q36">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DishesCollectionViewCell" id="cwb-eb-Q36" customClass="DishesCollectionViewCell" customModule="Food_Ordering_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="313"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PL9-av-vm0">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="313"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Om-aO-rP6">
+                                                    <rect key="frame" x="8" y="8" width="398" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIG-Y7-RPt">
+                                                    <rect key="frame" x="8" y="176" width="398" height="39"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1l-Rz-Vgg">
+                                                    <rect key="frame" x="8" y="223" width="398" height="39"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDD-KV-chi">
+                                                    <rect key="frame" x="8" y="270" width="398" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Add to Basket"/>
+                                                </button>
+                                            </subviews>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="313"/>
+                                        <connections>
+                                            <outlet property="dishDescription" destination="T1l-Rz-Vgg" id="8eK-SJ-cPc"/>
+                                            <outlet property="dishName" destination="pIG-Y7-RPt" id="84N-SY-ff9"/>
+                                            <outlet property="dishesImage" destination="8Om-aO-rP6" id="YL8-H1-1hs"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BLv-NL-np0" id="dVn-Dn-Tsm"/>
+                                    <outlet property="delegate" destination="BLv-NL-np0" id="sAb-an-Aoj"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n12-ie-ls4"/>
@@ -603,10 +639,13 @@
                             <constraint firstItem="n12-ie-ls4" firstAttribute="bottom" secondItem="g5o-Y0-WhC" secondAttribute="bottom" id="r4t-gN-EII"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="g5o-Y0-WhC" id="kmJ-o0-PI5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yX-Cx-zVl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2628" y="33"/>
+            <point key="canvasLocation" x="2626.0869565217395" y="32.8125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ghl-rv-CzG">
@@ -632,6 +671,7 @@
                 <tabBarController storyboardIdentifier="TabBarViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="liK-lS-al7" customClass="TabBarViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cf5-HP-6bi">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
