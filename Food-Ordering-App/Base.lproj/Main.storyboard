@@ -21,33 +21,33 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EbU-i7-Slz">
                                 <rect key="frame" x="0.0" y="44" width="414" height="686"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fwx-VQ-Dp8">
-                                    <size key="itemSize" width="406" height="599"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fwx-VQ-Dp8">
+                                    <size key="itemSize" width="411" height="656"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingCollectionViewCell" id="DEx-fR-0Ny" customClass="OnboardingCollectionViewCell" customModule="Food_Ordering_App" customModuleProvider="target">
-                                        <rect key="frame" x="4" y="0.0" width="406" height="599"/>
+                                        <rect key="frame" x="0.0" y="15" width="411" height="656"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8iG-IJ-Ra1">
-                                            <rect key="frame" x="0.0" y="0.0" width="406" height="599"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="411" height="656"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iPh-XE-J24">
-                                                    <rect key="frame" x="8" y="0.0" width="397" height="349"/>
+                                                    <rect key="frame" x="8" y="0.0" width="397" height="445"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quick Delivery at Your Home" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIE-dG-oD5">
-                                                    <rect key="frame" x="6" y="384" width="397" height="79"/>
+                                                    <rect key="frame" x="8" y="471" width="397" height="79"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food Delivery and Online Reservation from Restaurants" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQR-VP-mZw">
-                                                    <rect key="frame" x="6" y="487" width="397" height="41"/>
+                                                    <rect key="frame" x="8" y="589" width="397" height="41"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -55,7 +55,7 @@
                                                 </label>
                                             </subviews>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="406" height="599"/>
+                                        <size key="customSize" width="411" height="656"/>
                                         <connections>
                                             <outlet property="descriptionLabel" destination="bQR-VP-mZw" id="mmU-jw-pJN"/>
                                             <outlet property="imageView" destination="iPh-XE-J24" id="Ve9-GB-fFJ"/>
@@ -68,7 +68,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="k1u-ME-kV2"/>
                                 </connections>
                             </collectionView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="a6O-7U-cRm">
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="a6O-7U-cRm">
                                 <rect key="frame" x="149.5" y="730" width="115.5" height="26"/>
                                 <color key="pageIndicatorTintColor" systemColor="systemGray5Color"/>
                                 <color key="currentPageIndicatorTintColor" name="AccentColor"/>
@@ -168,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSb-XY-iOq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-138" y="98"/>
+            <point key="canvasLocation" x="-239" y="98"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="4Mt-e2-atf">
@@ -189,7 +189,7 @@
         <!--Register View Controller-->
         <scene sceneID="F5C-Eh-ISZ">
             <objects>
-                <viewController id="lpi-tM-V7C" customClass="RegisterViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lpi-tM-V7C" customClass="RegisterViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H7s-FF-1Fd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khW-ak-eE0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-349.27536231884062" y="835.71428571428567"/>
+            <point key="canvasLocation" x="-239" y="815"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="PBE-lI-7gI">
@@ -365,7 +365,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ghl-rv-CzG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PrU-ck-sx7" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PrU-ck-sx7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="E8W-oH-McR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

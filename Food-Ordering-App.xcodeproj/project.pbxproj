@@ -27,6 +27,13 @@
 		46BB6EB9288DD6450083DA3D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EB8288DD6450083DA3D /* LoginViewController.swift */; };
 		46BB6EBB288DD91F0083DA3D /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EBA288DD91F0083DA3D /* OnboardingSlide.swift */; };
 		46BB6EBD288DE5580083DA3D /* Onboarding.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 46BB6EBC288DE5580083DA3D /* Onboarding.jpg */; };
+		46BB6EC9288E08BB0083DA3D /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EC8288E08BB0083DA3D /* UserDefaults.swift */; };
+		46BB6ECB288E0E270083DA3D /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 46BB6ECA288E0E270083DA3D /* User.json */; };
+		46BB6ECF288E0E600083DA3D /* Dishes.json in Resources */ = {isa = PBXBuildFile; fileRef = 46BB6ECE288E0E600083DA3D /* Dishes.json */; };
+		46BB6ED1288E0EB10083DA3D /* Restaurant.json in Resources */ = {isa = PBXBuildFile; fileRef = 46BB6ED0288E0EB10083DA3D /* Restaurant.json */; };
+		46BB6ED5288E109B0083DA3D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6ED4288E109B0083DA3D /* UserModel.swift */; };
+		46BB6ED7288E10AA0083DA3D /* DishesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6ED6288E10AA0083DA3D /* DishesModel.swift */; };
+		46BB6ED9288E10C00083DA3D /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6ED8288E10C00083DA3D /* RestaurantModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +59,13 @@
 		46BB6EB8288DD6450083DA3D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		46BB6EBA288DD91F0083DA3D /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		46BB6EBC288DE5580083DA3D /* Onboarding.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Onboarding.jpg; sourceTree = "<group>"; };
+		46BB6EC8288E08BB0083DA3D /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		46BB6ECA288E0E270083DA3D /* User.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
+		46BB6ECE288E0E600083DA3D /* Dishes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Dishes.json; sourceTree = "<group>"; };
+		46BB6ED0288E0EB10083DA3D /* Restaurant.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Restaurant.json; sourceTree = "<group>"; };
+		46BB6ED4288E109B0083DA3D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		46BB6ED6288E10AA0083DA3D /* DishesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesModel.swift; sourceTree = "<group>"; };
+		46BB6ED8288E10C00083DA3D /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +100,8 @@
 			children = (
 				46BB6E86288D64780083DA3D /* AppDelegate.swift */,
 				46BB6E88288D64780083DA3D /* SceneDelegate.swift */,
+				46BB6ED3288E0F3B0083DA3D /* UserDefaults */,
+				46BB6ED2288E0EC10083DA3D /* Json */,
 				46BB6EC7288E015E0083DA3D /* ListDishes */,
 				46BB6EC6288E01470083DA3D /* ConfirmOrder */,
 				46BB6EC5288E01350083DA3D /* RestoranDetail */,
@@ -95,7 +111,7 @@
 				46BB6EC1288E00BF0083DA3D /* Order */,
 				46BB6EC0288E00A70083DA3D /* Register */,
 				46BB6EBF288E00910083DA3D /* Map */,
-				46BB6EB3288DCC210083DA3D /* Onboarding VC */,
+				46BB6EB3288DCC210083DA3D /* Onboarding */,
 				46BB6E8C288D64780083DA3D /* Main.storyboard */,
 				46BB6EBE288E00770083DA3D /* Model */,
 				46BB6E92288D647A0083DA3D /* Assets.xcassets */,
@@ -107,19 +123,22 @@
 			path = "Food-Ordering-App";
 			sourceTree = "<group>";
 		};
-		46BB6EB3288DCC210083DA3D /* Onboarding VC */ = {
+		46BB6EB3288DCC210083DA3D /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
 				46BB6EB4288DD4500083DA3D /* OnboardingCollectionViewCell.swift */,
 				46BB6EB6288DD47C0083DA3D /* OnboardingViewController.swift */,
 			);
-			path = "Onboarding VC";
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		46BB6EBE288E00770083DA3D /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				46BB6EBA288DD91F0083DA3D /* OnboardingSlide.swift */,
+				46BB6ED4288E109B0083DA3D /* UserModel.swift */,
+				46BB6ED6288E10AA0083DA3D /* DishesModel.swift */,
+				46BB6ED8288E10C00083DA3D /* RestaurantModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,6 +216,24 @@
 			path = ListDishes;
 			sourceTree = "<group>";
 		};
+		46BB6ED2288E0EC10083DA3D /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				46BB6ECA288E0E270083DA3D /* User.json */,
+				46BB6ECE288E0E600083DA3D /* Dishes.json */,
+				46BB6ED0288E0EB10083DA3D /* Restaurant.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		46BB6ED3288E0F3B0083DA3D /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				46BB6EC8288E08BB0083DA3D /* UserDefaults.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -256,7 +293,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				46BB6EBD288DE5580083DA3D /* Onboarding.jpg in Resources */,
+				46BB6ECB288E0E270083DA3D /* User.json in Resources */,
 				46BB6E96288D647A0083DA3D /* LaunchScreen.storyboard in Resources */,
+				46BB6ECF288E0E600083DA3D /* Dishes.json in Resources */,
+				46BB6ED1288E0EB10083DA3D /* Restaurant.json in Resources */,
 				46BB6E93288D647A0083DA3D /* Assets.xcassets in Resources */,
 				46BB6E8E288D64780083DA3D /* Main.storyboard in Resources */,
 			);
@@ -274,6 +314,8 @@
 				46BB6EA0288D69B50083DA3D /* RegisterViewController.swift in Sources */,
 				46BB6EB9288DD6450083DA3D /* LoginViewController.swift in Sources */,
 				46BB6EBB288DD91F0083DA3D /* OnboardingSlide.swift in Sources */,
+				46BB6ED7288E10AA0083DA3D /* DishesModel.swift in Sources */,
+				46BB6EC9288E08BB0083DA3D /* UserDefaults.swift in Sources */,
 				46BB6E87288D64780083DA3D /* AppDelegate.swift in Sources */,
 				46BB6EB5288DD4500083DA3D /* OnboardingCollectionViewCell.swift in Sources */,
 				46BB6EA4288D6A2F0083DA3D /* OrdersViewController.swift in Sources */,
@@ -281,9 +323,11 @@
 				46BB6EAE288D6B760083DA3D /* ProfileViewController.swift in Sources */,
 				46BB6EAA288D6B510083DA3D /* ConfirmViewController.swift in Sources */,
 				46BB6EA8288D6A8E0083DA3D /* ListDishesViewController.swift in Sources */,
+				46BB6ED9288E10C00083DA3D /* RestaurantModel.swift in Sources */,
 				46BB6E89288D64780083DA3D /* SceneDelegate.swift in Sources */,
 				46BB6EB0288D6D990083DA3D /* RestoranDetailsViewController.swift in Sources */,
 				46BB6E91288D64780083DA3D /* Food_Ordering_App.xcdatamodeld in Sources */,
+				46BB6ED5288E109B0083DA3D /* UserModel.swift in Sources */,
 				46BB6EA2288D69D60083DA3D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
