@@ -64,7 +64,8 @@ class LoginViewController: UIViewController {
         var i = 0
         while i < users.count {
             if emailTextField.text == users[i].email && passwordTextField.text == users[i].password {
-                //UserDefaults.standard.setValue(users[i].email, forKey: "loggedMail")
+                //for profile vc
+                UserDefaults.standard.setValue(users[i].email, forKey: "loggedMail")
                 return true
             }
             i += 1
@@ -79,7 +80,7 @@ class LoginViewController: UIViewController {
         
         if checkUsers() {
             UserDefaults.standard.set(true, forKey: "isLoggedIn")  // FLAG
-            let controller = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            let controller = storyboard?.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
             let navigationController = UINavigationController(rootViewController: controller)
             navigationController.modalPresentationStyle = .overFullScreen
             present(navigationController, animated: true, completion: nil)

@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //TODO: setup root view controller
         
         if UserDefaults.standard.bool(forKey: "isLoggedIn") {
-            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
             let navigationController = UINavigationController(rootViewController: controller)
             
             window?.rootViewController = navigationController

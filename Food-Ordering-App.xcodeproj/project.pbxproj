@@ -34,6 +34,8 @@
 		46BB6ED5288E109B0083DA3D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6ED4288E109B0083DA3D /* UserModel.swift */; };
 		46BB6ED7288E10AA0083DA3D /* DishesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6ED6288E10AA0083DA3D /* DishesModel.swift */; };
 		46BB6ED9288E10C00083DA3D /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6ED8288E10C00083DA3D /* RestaurantModel.swift */; };
+		46BB6EDF288ED1630083DA3D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EDE288ED1630083DA3D /* SearchViewController.swift */; };
+		46BB6EE4288ED4400083DA3D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EE3288ED4400083DA3D /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		46BB6ED4288E109B0083DA3D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		46BB6ED6288E10AA0083DA3D /* DishesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesModel.swift; sourceTree = "<group>"; };
 		46BB6ED8288E10C00083DA3D /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
+		46BB6EDE288ED1630083DA3D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		46BB6EE3288ED4400083DA3D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +104,10 @@
 			children = (
 				46BB6E86288D64780083DA3D /* AppDelegate.swift */,
 				46BB6E88288D64780083DA3D /* SceneDelegate.swift */,
+				46BB6EE5288ED4A60083DA3D /* TabBar */,
 				46BB6ED3288E0F3B0083DA3D /* UserDefaults */,
 				46BB6ED2288E0EC10083DA3D /* Json */,
+				46BB6EE0288ED1690083DA3D /* Search */,
 				46BB6EC7288E015E0083DA3D /* ListDishes */,
 				46BB6EC6288E01470083DA3D /* ConfirmOrder */,
 				46BB6EC5288E01350083DA3D /* RestoranDetail */,
@@ -234,6 +240,22 @@
 			path = UserDefaults;
 			sourceTree = "<group>";
 		};
+		46BB6EE0288ED1690083DA3D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				46BB6EDE288ED1630083DA3D /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		46BB6EE5288ED4A60083DA3D /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				46BB6EE3288ED4400083DA3D /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -311,6 +333,7 @@
 			files = (
 				46BB6EAC288D6B650083DA3D /* MapViewController.swift in Sources */,
 				46BB6EA6288D6A4C0083DA3D /* OrderDetailViewController.swift in Sources */,
+				46BB6EE4288ED4400083DA3D /* TabBarViewController.swift in Sources */,
 				46BB6EA0288D69B50083DA3D /* RegisterViewController.swift in Sources */,
 				46BB6EB9288DD6450083DA3D /* LoginViewController.swift in Sources */,
 				46BB6EBB288DD91F0083DA3D /* OnboardingSlide.swift in Sources */,
@@ -324,6 +347,7 @@
 				46BB6EAA288D6B510083DA3D /* ConfirmViewController.swift in Sources */,
 				46BB6EA8288D6A8E0083DA3D /* ListDishesViewController.swift in Sources */,
 				46BB6ED9288E10C00083DA3D /* RestaurantModel.swift in Sources */,
+				46BB6EDF288ED1630083DA3D /* SearchViewController.swift in Sources */,
 				46BB6E89288D64780083DA3D /* SceneDelegate.swift in Sources */,
 				46BB6EB0288D6D990083DA3D /* RestoranDetailsViewController.swift in Sources */,
 				46BB6E91288D64780083DA3D /* Food_Ordering_App.xcdatamodeld in Sources */,

@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1720.289855072464" y="97.767857142857139"/>
+            <point key="canvasLocation" x="-1787" y="98"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="nms-5p-oVe">
@@ -168,9 +168,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSb-XY-iOq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-239" y="98"/>
+            <point key="canvasLocation" x="-306" y="98"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="4Mt-e2-atf">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dFv-Qr-nsF" customClass="HomeViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -178,13 +178,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="8B9-KL-ndN"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" tag="1" title="Home" image="homekit" catalog="system" id="LEw-ZG-t1v"/>
                     <navigationItem key="navigationItem" id="E74-Qt-t7s"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHR-Ts-bZp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1470" y="98"/>
+            <point key="canvasLocation" x="1851" y="33"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="F5C-Eh-ISZ">
@@ -255,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khW-ak-eE0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-239" y="815"/>
+            <point key="canvasLocation" x="-306" y="777"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="PBE-lI-7gI">
@@ -270,22 +271,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SxF-Va-ogQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3180" y="836"/>
+            <point key="canvasLocation" x="3513" y="1029"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="0jj-in-tsc">
             <objects>
-                <viewController id="EGc-gU-OnE" customClass="ProfileViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EGc-gU-OnE" customClass="ProfileViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eXH-YI-qNV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Dyr-lW-NB5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="gWa-XC-pFa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iu5-2V-V2n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="899" y="836"/>
+            <point key="canvasLocation" x="759" y="777"/>
         </scene>
         <!--Confirm View Controller-->
         <scene sceneID="304-t0-AtP">
@@ -300,7 +302,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pmX-wr-rCi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4090" y="98"/>
+            <point key="canvasLocation" x="4343" y="268"/>
         </scene>
         <!--Restoran Details View Controller-->
         <scene sceneID="gVU-Zw-5tj">
@@ -315,7 +317,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iN1-i4-SgM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1377" y="-615"/>
+            <point key="canvasLocation" x="3514" y="-452"/>
         </scene>
         <!--Order Detail View Controller-->
         <scene sceneID="D6x-gT-cPM">
@@ -330,22 +332,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wnQ-HH-yCs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2325" y="-615"/>
+            <point key="canvasLocation" x="4278" y="-452"/>
         </scene>
-        <!--Orders View Controller-->
+        <!--Stores-->
         <scene sceneID="w7f-Vn-Qao">
             <objects>
-                <viewController id="dNv-QS-EHd" customClass="OrdersViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrdersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dNv-QS-EHd" customClass="OrdersViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AfZ-DU-Xd2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Xqk-kR-VLq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Stores" image="archivebox" catalog="system" id="UpO-Mi-NpL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e9M-oE-WLD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3180" y="-615"/>
+            <point key="canvasLocation" x="1578" y="777"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="Vth-TD-CnN">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Acc-n9-3gx" customClass="SearchViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ysj-oJ-dc7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7Wd-RS-XCt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="4hW-gy-4sJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g6w-qs-n4q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2370" y="777"/>
         </scene>
         <!--List Dishes View Controller-->
         <scene sceneID="FZv-6F-z0b">
@@ -360,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yX-Cx-zVl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2287" y="98"/>
+            <point key="canvasLocation" x="3514" y="268"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ghl-rv-CzG">
@@ -378,10 +397,34 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="doe-ZH-syC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-959" y="98"/>
+            <point key="canvasLocation" x="-1026" y="98"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="InQ-u4-nLl">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="liK-lS-al7" customClass="TabBarViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cf5-HP-6bi">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="dFv-Qr-nsF" kind="relationship" relationship="viewControllers" id="Rki-RE-Hij"/>
+                        <segue destination="dNv-QS-EHd" kind="relationship" relationship="viewControllers" id="cwv-as-4T3"/>
+                        <segue destination="Acc-n9-3gx" kind="relationship" relationship="viewControllers" id="l3N-Qp-ZuA"/>
+                        <segue destination="EGc-gU-OnE" kind="relationship" relationship="viewControllers" id="Z3b-rn-RzK"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fQW-l7-7iv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="970" y="33"/>
         </scene>
     </scenes>
     <resources>
+        <image name="archivebox" catalog="system" width="128" height="106"/>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -390,9 +433,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
