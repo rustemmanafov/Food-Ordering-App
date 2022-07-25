@@ -1,43 +1,550 @@
 [
-   {
-      "id":"1",
-      "name":"Istanbul",
-      "image":"Istanbul.jpg",
-      "description":"Best Dishes",
-      "coordinatex":"",
-      "coordinatey":""
-   },
-   
-   {
-      "id":"2",
-      "name":"Bulvar",
-      "image":"Bulvar.jpg",
-      "description":"Best Dishes",
-      "coordinatex":"",
-      "coordinatey":""
-   },
-   {
-      "id":"3",
-      "name":"Qebele",
-      "image":"Qebele.jpg",
-      "description":"Best Dishes",
-      "coordinatex":"",
-      "coordinatey":""
-   },
-   {
-      "id":"4",
-      "name":"Cinar",
-      "image":"Cinar.jpg",
-      "description":"Best Dishes",
-      "coordinatex":"",
-      "coordinatey":""
-   },
-   {
-      "id":"5",
-      "name":"Soul Kitchen",
-      "image":"Soul Kitchen.jpg",
-      "description":"Best Dishes",
-      "coordinatex":"",
-      "coordinatey":""
-   }
+    {
+        "id":"1",
+        "name":"Istanbul",
+        "image":"Istanbul.jpg",
+        "description":"Best Dishes",
+        "coordinatex":"",
+        "coordinatey":"",
+        "dishes": [
+            
+            {
+                
+                "id": "1",
+                "name": "Kabab",
+                "image": "Kabab.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "2",
+                "name": "Burger",
+                "image": "Burger.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "3",
+                "name": "Buglama",
+                "image": "Buglama.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "4",
+                "name": "Piti",
+                "image": "Piti.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "5",
+                "name": "Dovga",
+                "image": "Dovga.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "6",
+                "name": "Dolma",
+                "image": "Dolma.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "7",
+                "name": "Baliq",
+                "image": "Baliq.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "8",
+                "name": "Qayganaq",
+                "image": "Qayganaq.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "9",
+                "name": "Piroq",
+                "image": "Piroq.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "10",
+                "name": "Pizza",
+                "image": "Pizza.jpg",
+                "description": "Delicious",
+                
+            },
+            
+            {
+                
+                "id": "11",
+                "name": "Lobster",
+                "image": "Lobster.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "12",
+                "name": "Desert",
+                "image": "Desert.jpg",
+                "description": "Delicious",
+                
+            },
+        ]
+        
+    },
+    
+    {
+        "id":"2",
+        "name":"Bulvar",
+        "image":"Bulvar.jpg",
+        "description":"Best Dishes",
+        "coordinatex":"",
+        "coordinatey":"",
+        "dishes": [
+            
+            {
+                
+                "id": "1",
+                "name": "Kabab",
+                "image": "Kabab.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "2",
+                "name": "Burger",
+                "image": "Burger.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "3",
+                "name": "Buglama",
+                "image": "Buglama.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "4",
+                "name": "Piti",
+                "image": "Piti.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "5",
+                "name": "Dovga",
+                "image": "Dovga.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "6",
+                "name": "Dolma",
+                "image": "Dolma.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "7",
+                "name": "Baliq",
+                "image": "Baliq.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "8",
+                "name": "Qayganaq",
+                "image": "Qayganaq.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "9",
+                "name": "Piroq",
+                "image": "Piroq.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "10",
+                "name": "Pizza",
+                "image": "Pizza.jpg",
+                "description": "Delicious",
+                
+            },
+            
+            {
+                
+                "id": "11",
+                "name": "Lobster",
+                "image": "Lobster.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "12",
+                "name": "Desert",
+                "image": "Desert.jpg",
+                "description": "Delicious",
+                
+            },
+        ]
+        
+    },
+    {
+        "id":"3",
+        "name":"Qebele",
+        "image":"Qebele.jpg",
+        "description":"Best Dishes",
+        "coordinatex":"",
+        "coordinatey":"",
+        "dishes": [
+            
+            {
+                
+                "id": "1",
+                "name": "Kabab",
+                "image": "Kabab.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "2",
+                "name": "Burger",
+                "image": "Burger.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "3",
+                "name": "Buglama",
+                "image": "Buglama.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "4",
+                "name": "Piti",
+                "image": "Piti.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "5",
+                "name": "Dovga",
+                "image": "Dovga.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "6",
+                "name": "Dolma",
+                "image": "Dolma.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "7",
+                "name": "Baliq",
+                "image": "Baliq.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "8",
+                "name": "Qayganaq",
+                "image": "Qayganaq.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "9",
+                "name": "Piroq",
+                "image": "Piroq.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "10",
+                "name": "Pizza",
+                "image": "Pizza.jpg",
+                "description": "Delicious",
+                
+            },
+            
+            {
+                
+                "id": "11",
+                "name": "Lobster",
+                "image": "Lobster.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "12",
+                "name": "Desert",
+                "image": "Desert.jpg",
+                "description": "Delicious",
+                
+            },
+        ]
+        
+        
+    },
+    {
+        "id":"4",
+        "name":"Cinar",
+        "image":"Cinar.jpg",
+        "description":"Best Dishes",
+        "coordinatex":"",
+        "coordinatey":"",
+        "dishes": [
+            
+            {
+                
+                "id": "1",
+                "name": "Kabab",
+                "image": "Kabab.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "2",
+                "name": "Burger",
+                "image": "Burger.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "3",
+                "name": "Buglama",
+                "image": "Buglama.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "4",
+                "name": "Piti",
+                "image": "Piti.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "5",
+                "name": "Dovga",
+                "image": "Dovga.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "6",
+                "name": "Dolma",
+                "image": "Dolma.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "7",
+                "name": "Baliq",
+                "image": "Baliq.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "8",
+                "name": "Qayganaq",
+                "image": "Qayganaq.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "9",
+                "name": "Piroq",
+                "image": "Piroq.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "10",
+                "name": "Pizza",
+                "image": "Pizza.jpg",
+                "description": "Delicious",
+                
+            },
+            
+            {
+                
+                "id": "11",
+                "name": "Lobster",
+                "image": "Lobster.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "12",
+                "name": "Desert",
+                "image": "Desert.jpg",
+                "description": "Delicious",
+                
+            },
+        ]
+        
+        
+    },
+    {
+        "id":"5",
+        "name":"Soul Kitchen",
+        "image":"Soul Kitchen.jpg",
+        "description":"Best Dishes",
+        "coordinatex":"",
+        "coordinatey":"",
+        "dishes": [
+            
+            {
+                
+                "id": "1",
+                "name": "Kabab",
+                "image": "Kabab.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "2",
+                "name": "Burger",
+                "image": "Burger.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "3",
+                "name": "Buglama",
+                "image": "Buglama.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "4",
+                "name": "Piti",
+                "image": "Piti.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "5",
+                "name": "Dovga",
+                "image": "Dovga.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "6",
+                "name": "Dolma",
+                "image": "Dolma.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "7",
+                "name": "Baliq",
+                "image": "Baliq.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "8",
+                "name": "Qayganaq",
+                "image": "Qayganaq.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "9",
+                "name": "Piroq",
+                "image": "Piroq.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                
+                "id": "10",
+                "name": "Pizza",
+                "image": "Pizza.jpg",
+                "description": "Delicious",
+                
+            },
+            
+            {
+                
+                "id": "11",
+                "name": "Lobster",
+                "image": "Lobster.jpg",
+                "description": "Delicious",
+                
+            },
+            {
+                "id": "12",
+                "name": "Desert",
+                "image": "Desert.jpg",
+                "description": "Delicious",
+
+            },
+        ]
+        
+        
+    }
 ]

@@ -12,52 +12,29 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var restaurants = [RestaurantModel]()
-    var jsonData = URL(string: "")
-
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      //jsonSetup()
-        jsonCalled()
-        jsonData = getDocumentsDirectoryUrl().appendingPathComponent("Restaurant.json")
+     jsonSetup()
 
     }
-    func getDocumentsDirectoryUrl() -> URL{
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentsDirectory = paths[0]
-        return documentsDirectory
-    }
     
-    func jsonCalled() {
-        if let file = jsonData, let data = try? Data(contentsOf: file) {
-            do {
+    func jsonSetup() {
+
+        if let jsonFile = Bundle.main.url(forResource: "Restaurant", withExtension: "json"), let data = try? Data(contentsOf: jsonFile){
+
+            do{
                 restaurants = try JSONDecoder().decode([RestaurantModel].self, from: data)
                 collectionView.reloadData()
-            }
-            catch {
+
+            }catch{
                 print(error.localizedDescription)
+
             }
         }
+
     }
-    
-    
-    
-//    func jsonSetup() {
-//
-//        if let jsonFile = Bundle.main.url(forResource: "Restaurant", withExtension: "json"), let data = try? Data(contentsOf: jsonFile){
-//
-//            do{
-//                restaurants = try JSONDecoder().decode([RestaurantModel].self, from: data)
-//                collectionView.reloadData()
-//
-//            }catch{
-//                print(error.localizedDescription)
-//
-//            }
-//        }
-//
-//    }
     
 }
 
@@ -74,6 +51,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.restaurantName.text = restaurants[indexPath.row].name
         cell.restaurantDesc.text = restaurants[indexPath.row].description
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: <#T##String#>)
     }
     
 

@@ -15,4 +15,5 @@ struct RestaurantModel: Codable {
     let description: String
     let coordinatex: String
     let coordinatey: String
+    let dishes: [DishesModel]
 }
