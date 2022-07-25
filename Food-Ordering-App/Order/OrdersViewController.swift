@@ -22,7 +22,7 @@ class OrdersViewController: UIViewController {
 extension OrdersViewController: UITableViewDelegate, UITableViewDataSource {
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1 // write dish count
+        3
     }
     
     

@@ -1,11 +1,11 @@
 [
     {
-        "id":"1",
-        "name":"Istanbul",
-        "image":"Istanbul.jpg",
+        "id": "1",
+        "name": "Istanbul",
+        "image": "Istanbul.jpg",
         "description":"Best Dishes",
-        "coordinatex":"",
-        "coordinatey":"",
+        "coordinatex": "",
+        "coordinatey": "",
         "dishes": [
             
             {
@@ -452,12 +452,12 @@
     
     
     {
-        "id":"5",
-        "name":"Soul Kitchen",
-        "image":"Soul Kitchen.jpg",
-        "description":"Best Dishes",
-        "coordinatex":"",
-        "coordinatey":"",
+        "id": "5",
+        "name": "Soul Kitchen",
+        "image": "Soul Kitchen.jpg",
+        "description": "Best Dishes",
+        "coordinatex": "",
+        "coordinatey": "",
         "dishes": [
             
             {
