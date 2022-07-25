@@ -173,12 +173,12 @@
         <!--Home View Controller-->
         <scene sceneID="4Mt-e2-atf">
             <objects>
-                <viewController id="dFv-Qr-nsF" customClass="HomeViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dFv-Qr-nsF" customClass="HomeViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5r9-Mu-m0q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="8B9-KL-ndN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="E74-Qt-t7s"/>
                 </viewController>
@@ -365,7 +365,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ghl-rv-CzG">
             <objects>
-                <navigationController storyboardIdentifier="HomeNC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PrU-ck-sx7" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="loginNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PrU-ck-sx7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="E8W-oH-McR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -390,6 +390,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

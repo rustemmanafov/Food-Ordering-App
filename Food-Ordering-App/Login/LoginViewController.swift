@@ -22,6 +22,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         underlineButton()
+        
+        jsonData = getDocumentsDirectoryUrl().appendingPathComponent("User.json")
+
     }
     
     // Underline Button first code
@@ -39,9 +42,54 @@ class LoginViewController: UIViewController {
         .underlineStyle: NSUnderlineStyle.single.rawValue ]
     
     
+    func getDocumentsDirectoryUrl() -> URL{
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
+    
+    func jsonCalled() {
+        if let file = jsonData, let data = try? Data(contentsOf: file) {
+            do {
+                users = try JSONDecoder().decode([UserModel].self, from: data)
+            } catch {
+                print(error.localizedDescription)
+
+            }
+        }
+
+    }
+    
+    func checkUsers() -> Bool {
+        var i = 0
+        while i < users.count {
+            if emailTextField.text == users[i].email && passwordTextField.text == users[i].password {
+                //UserDefaults.standard.setValue(users[i].email, forKey: "loggedMail")
+                return true
+            }
+            i += 1
+        }
+        return false
+    }
+    
+    
     
     @IBAction func signInAct(_ sender: Any) {
+        jsonCalled()
         
+        if checkUsers() {
+            UserDefaults.standard.set(true, forKey: "isLoggedIn")  // FLAG
+            let controller = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            let navigationController = UINavigationController(rootViewController: controller)
+            navigationController.modalPresentationStyle = .overFullScreen
+            present(navigationController, animated: true, completion: nil)
+            
+        } else{
+            let alert = UIAlertController(title: "Alert", message: "Something went wrong", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            self.present(alert, animated: true, completion: nil)
+            
+        }
         
     }
     
