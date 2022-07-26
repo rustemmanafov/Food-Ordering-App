@@ -9,6 +9,7 @@ import UIKit
 
 protocol RestaurantCollectionViewCellDelegate {
     func actionButtonCalled(index: Int)
+    func actionRestaurantDetailCalled(index: Int)
 }
 
 class RestaurantCollectionViewCell: UICollectionViewCell {
@@ -30,8 +31,11 @@ class RestaurantCollectionViewCell: UICollectionViewCell {
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
         
         _ = tapGestureRecognizer.view as! UIImageView
-        
         delegate?.actionButtonCalled(index: tag)
+    }
+    
+    @IBAction func restaurantDetailsBtn(_ sender: Any) {
         
+        delegate?.actionRestaurantDetailCalled(index: tag)
     }
 }

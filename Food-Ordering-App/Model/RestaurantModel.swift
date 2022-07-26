@@ -8,8 +8,7 @@
 import Foundation
 
 struct RestaurantModel: Codable {
-    
-    let id: Int
+    let id: String
     let name: String
     let image: String
     let description: String
@@ -17,3 +16,4 @@ struct RestaurantModel: Codable {
     let coordinatey: String
     let dishes: [DishesModel]
 }
+

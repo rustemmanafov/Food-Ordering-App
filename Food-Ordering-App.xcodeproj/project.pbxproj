@@ -30,7 +30,6 @@
 		46BB6EBD288DE5580083DA3D /* Onboarding.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 46BB6EBC288DE5580083DA3D /* Onboarding.jpg */; };
 		46BB6EC9288E08BB0083DA3D /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6EC8288E08BB0083DA3D /* UserDefaults.swift */; };
 		46BB6ECB288E0E270083DA3D /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 46BB6ECA288E0E270083DA3D /* User.json */; };
-		46BB6ECF288E0E600083DA3D /* Dishes.json in Resources */ = {isa = PBXBuildFile; fileRef = 46BB6ECE288E0E600083DA3D /* Dishes.json */; };
 		46BB6ED1288E0EB10083DA3D /* Restaurant.json in Resources */ = {isa = PBXBuildFile; fileRef = 46BB6ED0288E0EB10083DA3D /* Restaurant.json */; };
 		46BB6ED5288E109B0083DA3D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6ED4288E109B0083DA3D /* UserModel.swift */; };
 		46BB6ED7288E10AA0083DA3D /* DishesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6ED6288E10AA0083DA3D /* DishesModel.swift */; };
@@ -68,7 +67,6 @@
 		46BB6EBC288DE5580083DA3D /* Onboarding.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Onboarding.jpg; sourceTree = "<group>"; };
 		46BB6EC8288E08BB0083DA3D /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		46BB6ECA288E0E270083DA3D /* User.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
-		46BB6ECE288E0E600083DA3D /* Dishes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Dishes.json; sourceTree = "<group>"; };
 		46BB6ED0288E0EB10083DA3D /* Restaurant.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Restaurant.json; sourceTree = "<group>"; };
 		46BB6ED4288E109B0083DA3D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		46BB6ED6288E10AA0083DA3D /* DishesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesModel.swift; sourceTree = "<group>"; };
@@ -235,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				46BB6ECA288E0E270083DA3D /* User.json */,
-				46BB6ECE288E0E600083DA3D /* Dishes.json */,
 				46BB6ED0288E0EB10083DA3D /* Restaurant.json */,
 			);
 			path = Json;
@@ -337,7 +334,6 @@
 				46BB6EBD288DE5580083DA3D /* Onboarding.jpg in Resources */,
 				46BB6ECB288E0E270083DA3D /* User.json in Resources */,
 				46BB6E96288D647A0083DA3D /* LaunchScreen.storyboard in Resources */,
-				46BB6ECF288E0E600083DA3D /* Dishes.json in Resources */,
 				46BB6ED1288E0EB10083DA3D /* Restaurant.json in Resources */,
 				46BB6E93288D647A0083DA3D /* Assets.xcassets in Resources */,
 				46BB6E8E288D64780083DA3D /* Main.storyboard in Resources */,

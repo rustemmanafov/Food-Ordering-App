@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController, RestaurantCollectionViewCellDelegate {
-
+   
     @IBOutlet weak var collectionView: UICollectionView!
     
     var restaurants = [RestaurantModel]()
@@ -43,6 +43,14 @@ class HomeViewController: UIViewController, RestaurantCollectionViewCellDelegate
         navigationController?.show(controller, sender: nil)
     }
     
+    func RestaurantDetailsCalled(index: Int) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "RestoranDetailsViewController") as! RestoranDetailsViewController
+        controller.restaurantDetail = restaurants[index]
+        controller.title = restaurants[index].name
+        navigationController?.show(controller, sender: nil)
+    }
+
+    
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -64,19 +72,20 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "ListDishesViewController") as! ListDishesViewController
-        
-        show(controller, sender: nil)
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let controller = storyboard?.instantiateViewController(withIdentifier: "ListDishesViewController") as! ListDishesViewController
+//
+//        show(controller, sender: nil)
+//    }
+    
     
     func actionButtonCalled(index: Int) {
        navigate(index: index)
-        
     }
     
 
-    
-    
+    func actionRestaurantDetailCalled(index: Int) {
+        RestaurantDetailsCalled(index: index)
+    }
     
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 struct DishesModel: Codable {
-    let id: Int
+    let id: String
     let name: String
     let image: String
     let description: String
