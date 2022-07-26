@@ -32,9 +32,9 @@ class OnboardingViewController: UIViewController {
         nextBtnOutlet.layer.cornerRadius = 10
         
         slides = [
-            OnboardingSlide(title: "Food Delivery at Your Home", description: "Food Delivery and Online Reservation from Restaurants.", image: #imageLiteral(resourceName: "Image-1")),
+            OnboardingSlide(title: "Food Delivery at Your Home", description: "Food Delivery and Online Reservation from Restaurants.", image: #imageLiteral(resourceName: "Slide 1")),
             
-            OnboardingSlide(title: "Quick Delivery", description: "Your orders will be delivered instantly irrespective of your location.", image: #imageLiteral(resourceName: "Image"))
+            OnboardingSlide(title: "Quick Delivery", description: "Your orders will be delivered instantly irrespective of your location.", image: #imageLiteral(resourceName: "Slide 3"))
         ]
         
         pageControl.numberOfPages = slides.count

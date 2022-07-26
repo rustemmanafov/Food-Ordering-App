@@ -9,11 +9,22 @@ import UIKit
 
 class RestoranDetailsViewController: UIViewController {
 
+    @IBOutlet weak var restaurantImage: UIImageView!
+    @IBOutlet weak var restaurantDetailText: UITextView!
+    @IBOutlet weak var showLocationLbl: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        showLocationLbl.layer.cornerRadius = 10
     }
     
 
+    @IBAction func showLocation(_ sender: Any) {
+        
+        let controller = storyboard?.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+        
+        show(controller, sender: nil)
+    }
     
 }
