@@ -8,11 +8,10 @@
 import UIKit
 
 class ListDishesViewController: UIViewController, DishesCollectionViewCellDelegate {
-    
-    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var dishModel = [DishesModel]()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +20,7 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
     
     func addToBasket(index: Int) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "OrdersViewController") as! OrdersViewController
-        //controller.orders = dishModel[index].name
+        controller.addToBasket(dish: dishModel[index])
         controller.title = dishModel[index].name
         navigationController?.show(controller, sender: nil)
     }
@@ -31,7 +30,7 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
 extension ListDishesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        dishModel.count
+         dishModel.count
     }
    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

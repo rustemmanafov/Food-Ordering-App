@@ -17,7 +17,7 @@ class HomeViewController: UIViewController, RestaurantCollectionViewCellDelegate
         super.viewDidLoad()
 
      jsonSetup()
-
+        
     }
     
     func jsonSetup() {
