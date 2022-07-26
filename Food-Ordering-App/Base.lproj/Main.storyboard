@@ -548,8 +548,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NqL-ku-46H">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NqL-ku-46H">
+                                <rect key="frame" x="0.0" y="44" width="414" height="687"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StoreTableViewCell" rowHeight="128" id="664-Q0-2gY" customClass="StoreTableViewCell" customModule="Food_Ordering_App" customModuleProvider="target">
@@ -591,15 +592,18 @@
                                     <outlet property="delegate" destination="dNv-QS-EHd" id="6cL-g7-ah9"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXY-tO-Elz">
+                                <rect key="frame" x="126" y="761" width="162" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Confirm Order">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xqk-kR-VLq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="NqL-ku-46H" firstAttribute="leading" secondItem="Xqk-kR-VLq" secondAttribute="leading" id="Gj9-cA-zgJ"/>
-                            <constraint firstItem="Xqk-kR-VLq" firstAttribute="bottom" secondItem="NqL-ku-46H" secondAttribute="bottom" id="bq4-yo-qgA"/>
-                            <constraint firstItem="Xqk-kR-VLq" firstAttribute="trailing" secondItem="NqL-ku-46H" secondAttribute="trailing" id="rm6-87-XIs"/>
-                            <constraint firstItem="NqL-ku-46H" firstAttribute="top" secondItem="Xqk-kR-VLq" secondAttribute="top" id="uoR-ww-f7m"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Basket" image="archivebox" catalog="system" id="UpO-Mi-NpL"/>
                     <connections>
