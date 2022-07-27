@@ -13,6 +13,8 @@ class StoreTableViewCell: UITableViewCell {
     @IBOutlet weak var dishImageView: UIImageView!
     @IBOutlet weak var dishName: UILabel!
     @IBOutlet weak var dishDescription: UILabel!
+    @IBOutlet weak var dishCountLbl: UILabel!
+    
     
     
     override func awakeFromNib() {

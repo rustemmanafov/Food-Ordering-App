@@ -22,6 +22,7 @@ class OrdersViewController: UIViewController {
     func addToBasket(dish: DishesModel) {
         orders.append(dish)
     }
+    
 }
 
 extension OrdersViewController: UITableViewDelegate, UITableViewDataSource {

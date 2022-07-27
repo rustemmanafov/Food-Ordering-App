@@ -21,7 +21,6 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
     func addToBasket(index: Int) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "OrdersViewController") as! OrdersViewController
         controller.addToBasket(dish: dishModel[index])
-        controller.title = dishModel[index].name
         navigationController?.show(controller, sender: nil)
     }
     

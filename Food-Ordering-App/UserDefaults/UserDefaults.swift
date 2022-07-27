@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// For Onboarding page UserDefaults
 extension UserDefaults {
     private enum UserDefaultsKeys: String {
         case hasOnboarded
@@ -16,7 +16,6 @@ extension UserDefaults {
         get {
             bool(forKey: UserDefaultsKeys.hasOnboarded.rawValue)
         }
-        
         set {
             setValue(newValue, forKey: UserDefaultsKeys.hasOnboarded.rawValue)
         }

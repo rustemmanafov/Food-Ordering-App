@@ -182,7 +182,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ORf-qr-bqM">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="720"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hdS-8n-zzh">
                                     <size key="itemSize" width="414" height="315"/>
@@ -217,10 +217,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0TV-QO-mde">
-                                                    <rect key="frame" x="8" y="276" width="398" height="31"/>
+                                                    <rect key="frame" x="350" y="22" width="47" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Restaurant Deatils"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="info.circle.fill" catalog="system"/>
                                                     <connections>
                                                         <action selector="restaurantDetailsBtn:" destination="4NZ-kI-a0X" eventType="touchUpInside" id="Kz8-cA-dMw"/>
                                                     </connections>
@@ -251,14 +251,18 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Home" image="homekit" catalog="system" id="LEw-ZG-t1v"/>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="1wb-X4-P1b"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="E74-Qt-t7s"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="ORf-qr-bqM" id="rFb-rC-oFg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHR-Ts-bZp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1850.7246376811595" y="32.8125"/>
+            <point key="canvasLocation" x="1822" y="33"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="F5C-Eh-ISZ">
@@ -570,21 +574,29 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAX-53-9AU">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ezo-sQ-AW4">
+                                                    <rect key="frame" x="20" y="21" width="109" height="86"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6A-z4-Mur">
                                                     <rect key="frame" x="147" y="86" width="247" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Baliq" translatesAutoresizingMaskIntoConstraints="NO" id="ezo-sQ-AW4">
-                                                    <rect key="frame" x="20" y="21" width="109" height="86"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAX-53-9AU">
+                                                    <rect key="frame" x="147" y="53" width="247" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dishDescription" destination="UAX-53-9AU" id="Q7Y-WU-3vE"/>
+                                            <outlet property="dishCountLbl" destination="Z6A-z4-Mur" id="7uk-Yw-rHA"/>
+                                            <outlet property="dishDescription" destination="Z6A-z4-Mur" id="EfG-7n-riZ"/>
                                             <outlet property="dishImageView" destination="ezo-sQ-AW4" id="JJr-zn-Ir5"/>
                                             <outlet property="dishName" destination="zhR-HZ-vqB" id="Nlk-gn-Qyv"/>
                                         </connections>
@@ -596,7 +608,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXY-tO-Elz">
-                                <rect key="frame" x="126" y="761" width="162" height="31"/>
+                                <rect key="frame" x="132" y="760" width="150" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <state key="normal" title="Button"/>
@@ -721,14 +733,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDD-KV-chi">
-                                                    <rect key="frame" x="8" y="270" width="398" height="31"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipX-8C-Rvb">
+                                                    <rect key="frame" x="348" y="20" width="47" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Add to Basket"/>
-                                                    <connections>
-                                                        <action selector="addBasketBtn:" destination="cwb-eb-Q36" eventType="touchUpInside" id="zZE-Y8-tgY"/>
-                                                    </connections>
+                                                    <buttonConfiguration key="configuration" style="plain" image="info.circle.fill" catalog="system"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1l-Rz-Vgg">
                                                     <rect key="frame" x="8" y="243" width="398" height="21"/>
@@ -737,12 +746,33 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="pjR-3t-T1c">
+                                                    <rect key="frame" x="8" y="271" width="94" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="countDishes:" destination="cwb-eb-Q36" eventType="valueChanged" id="Jk4-dL-nuB"/>
+                                                    </connections>
+                                                </stepper>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDD-KV-chi">
+                                                    <rect key="frame" x="135" y="271" width="145" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="linkColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Add to Basket">
+                                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="addBasketBtn:" destination="cwb-eb-Q36" eventType="touchUpInside" id="zZE-Y8-tgY"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="313"/>
                                         <connections>
+                                            <outlet property="countDishLbl" destination="pjR-3t-T1c" id="LFU-HU-v2W"/>
                                             <outlet property="dishDescription" destination="T1l-Rz-Vgg" id="8eK-SJ-cPc"/>
                                             <outlet property="dishName" destination="pIG-Y7-RPt" id="84N-SY-ff9"/>
+                                            <outlet property="dishesDetailLbl" destination="aDD-KV-chi" id="xdj-zk-yBr"/>
                                             <outlet property="dishesImage" destination="8Om-aO-rP6" id="YL8-H1-1hs"/>
                                         </connections>
                                     </collectionViewCell>
@@ -811,9 +841,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Baliq" width="960" height="540"/>
         <image name="archivebox" catalog="system" width="128" height="106"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="AccentColor">
