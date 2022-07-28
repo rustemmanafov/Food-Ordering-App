@@ -14,13 +14,21 @@ class ConfirmViewController: UIViewController {
     @IBOutlet weak var PriceTxt: UITextField!
     @IBOutlet weak var payLbl: UIButton!
     
-    var cardArray = ["image"]
+    var cardArray = ["1621472600_214508.png", "classic.jpg"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         payLbl.layer.cornerRadius = 10
-       
+        
+        // image tapped
+        collectioView.isUserInteractionEnabled = true
+        collectioView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:))))
+    }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
+        _ = tapGestureRecognizer.view as! UICollectionView
+        cartNameTxt.text = "Rustam Manafli"
     }
     
     @IBAction func payAct(_ sender: Any) {
@@ -38,7 +46,7 @@ extension ConfirmViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath) as! CardCollectionViewCell
-        
+        cell.cardImage.image = UIImage(named: cardArray[indexPath.row])
         return cell
     }
     

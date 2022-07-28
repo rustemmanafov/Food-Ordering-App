@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4667FD20288FDB41001BA5FE /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667FD1F288FDB41001BA5FE /* SearchTableViewCell.swift */; };
 		4667FD222892A87D001BA5FE /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667FD212892A87D001BA5FE /* CardCollectionViewCell.swift */; };
+		4667FD272892C557001BA5FE /* 1621472600_214508.png in Resources */ = {isa = PBXBuildFile; fileRef = 4667FD252892C556001BA5FE /* 1621472600_214508.png */; };
+		4667FD282892C557001BA5FE /* classic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4667FD262892C557001BA5FE /* classic.jpg */; };
 		46BB6E87288D64780083DA3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6E86288D64780083DA3D /* AppDelegate.swift */; };
 		46BB6E89288D64780083DA3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6E88288D64780083DA3D /* SceneDelegate.swift */; };
 		46BB6E8E288D64780083DA3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46BB6E8C288D64780083DA3D /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 /* Begin PBXFileReference section */
 		4667FD1F288FDB41001BA5FE /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		4667FD212892A87D001BA5FE /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		4667FD252892C556001BA5FE /* 1621472600_214508.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1621472600_214508.png; sourceTree = "<group>"; };
+		4667FD262892C557001BA5FE /* classic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = classic.jpg; sourceTree = "<group>"; };
 		46BB6E83288D64780083DA3D /* Food-Ordering-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food-Ordering-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BB6E86288D64780083DA3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46BB6E88288D64780083DA3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 				46BB6E97288D647A0083DA3D /* Info.plist */,
 				46BB6E8F288D64780083DA3D /* Food_Ordering_App.xcdatamodeld */,
 				46BB6EBC288DE5580083DA3D /* Onboarding.jpg */,
+				4667FD252892C556001BA5FE /* 1621472600_214508.png */,
+				4667FD262892C557001BA5FE /* classic.jpg */,
 			);
 			path = "Food-Ordering-App";
 			sourceTree = "<group>";
@@ -334,7 +340,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4667FD272892C557001BA5FE /* 1621472600_214508.png in Resources */,
 				46BB6EBD288DE5580083DA3D /* Onboarding.jpg in Resources */,
+				4667FD282892C557001BA5FE /* classic.jpg in Resources */,
 				46BB6ECB288E0E270083DA3D /* User.json in Resources */,
 				46BB6E96288D647A0083DA3D /* LaunchScreen.storyboard in Resources */,
 				46BB6ED1288E0EB10083DA3D /* Restaurant.json in Resources */,

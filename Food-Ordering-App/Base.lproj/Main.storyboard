@@ -547,30 +547,30 @@
         <!--Confirm View Controller-->
         <scene sceneID="304-t0-AtP">
             <objects>
-                <viewController id="QtV-5f-43i" customClass="ConfirmViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConfirmViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QtV-5f-43i" customClass="ConfirmViewController" customModule="Food_Ordering_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R9k-zT-nuL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ipg-D3-fw7">
-                                <rect key="frame" x="0.0" y="61" width="414" height="190"/>
+                                <rect key="frame" x="0.0" y="61" width="414" height="244"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YNP-aU-iSW">
-                                    <size key="itemSize" width="239" height="148"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YNP-aU-iSW">
+                                    <size key="itemSize" width="273" height="170"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCollectionViewCell" id="Gpc-Ah-ZHN" customClass="CardCollectionViewCell" customModule="Food_Ordering_App" customModuleProvider="target">
-                                        <rect key="frame" x="87" y="0.0" width="240" height="150"/>
+                                        <rect key="frame" x="0.0" y="37" width="273" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="28c-fT-SbJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="273" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qZw-oL-hMz">
-                                                    <rect key="frame" x="8" y="8" width="224" height="134"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qZw-oL-hMz">
+                                                    <rect key="frame" x="8" y="8" width="257" height="154"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -580,7 +580,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="qZw-oL-hMz" secondAttribute="trailing" constant="8" id="zQU-kA-vQO"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="240" height="150"/>
+                                        <size key="customSize" width="273" height="170"/>
                                         <connections>
                                             <outlet property="cardImage" destination="qZw-oL-hMz" id="gAh-M6-MQm"/>
                                         </connections>
@@ -618,7 +618,7 @@
                         <constraints>
                             <constraint firstItem="718-xh-4Ko" firstAttribute="centerX" secondItem="Ipg-D3-fw7" secondAttribute="centerX" id="1MH-l5-dUf"/>
                             <constraint firstItem="Ipg-D3-fw7" firstAttribute="top" secondItem="5aJ-fV-mxr" secondAttribute="top" constant="17" id="Ba3-4y-QYw"/>
-                            <constraint firstItem="Zs0-TP-umT" firstAttribute="top" secondItem="Ipg-D3-fw7" secondAttribute="bottom" constant="78" id="GMm-Iu-kMg"/>
+                            <constraint firstItem="Zs0-TP-umT" firstAttribute="top" secondItem="Ipg-D3-fw7" secondAttribute="bottom" constant="24" id="GMm-Iu-kMg"/>
                             <constraint firstItem="5aJ-fV-mxr" firstAttribute="trailing" secondItem="Zs0-TP-umT" secondAttribute="trailing" constant="20" id="KrI-dI-YdH"/>
                             <constraint firstItem="Zs0-TP-umT" firstAttribute="top" secondItem="R9k-zT-nuL" secondAttribute="top" constant="329" id="POS-Dm-0Hj"/>
                             <constraint firstItem="Ipg-D3-fw7" firstAttribute="leading" secondItem="5aJ-fV-mxr" secondAttribute="leading" id="Qbv-gz-FjM"/>
@@ -834,6 +834,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Confirm Order">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="confirmOrderAct:" destination="dNv-QS-EHd" eventType="touchUpInside" id="Mog-rd-gDv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xqk-kR-VLq"/>

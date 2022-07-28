@@ -23,7 +23,16 @@ class OrdersViewController: UIViewController {
     
     func addToBasket(dish: DishesModel) {
         orders.append(dish)
+        
     }
+    
+    @IBAction func confirmOrderAct(_ sender: Any) {
+        
+        let controller = storyboard?.instantiateViewController(withIdentifier: "ConfirmViewController") as! ConfirmViewController
+        
+        show(controller, sender: nil)
+    }
+    
     
 }
 
