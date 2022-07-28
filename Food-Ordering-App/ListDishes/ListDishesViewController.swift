@@ -31,6 +31,10 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
         navigationController?.show(controller, sender: nil)
     }
     
+    func dishCount(index: Int) {
+        print("worked")
+        
+    }
     }
     
 extension ListDishesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -58,6 +62,10 @@ extension ListDishesViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func actionDishDetail(index: Int) {
         orderDetail(index: index)
+    }
+    
+    func actionCountDish(index: Int) {
+        dishCount(index: index)
     }
     
 }

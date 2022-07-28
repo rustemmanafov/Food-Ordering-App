@@ -875,6 +875,9 @@
                                     <constraint firstAttribute="height" constant="44" id="dqC-ht-Q0d"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Acc-n9-3gx" id="2Hp-5e-Ppb"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wLx-QU-LfY">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
@@ -1008,9 +1011,16 @@
                                                         <action selector="addBasketBtn:" destination="cwb-eb-Q36" eventType="touchUpInside" id="zZE-Y8-tgY"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9u0-Gf-WAE">
+                                                    <rect key="frame" x="344" y="276" width="44" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="T1l-Rz-Vgg" firstAttribute="leading" secondItem="PL9-av-vm0" secondAttribute="leading" constant="8" id="0Wz-c6-Jhi"/>
+                                                <constraint firstItem="9u0-Gf-WAE" firstAttribute="centerY" secondItem="aDD-KV-chi" secondAttribute="centerY" id="2uv-46-2g7"/>
                                                 <constraint firstItem="pjR-3t-T1c" firstAttribute="top" secondItem="T1l-Rz-Vgg" secondAttribute="bottom" constant="13" id="4PP-bl-c6a"/>
                                                 <constraint firstItem="pIG-Y7-RPt" firstAttribute="leading" secondItem="PL9-av-vm0" secondAttribute="leading" constant="8" id="AYX-vo-4df"/>
                                                 <constraint firstItem="pIG-Y7-RPt" firstAttribute="top" secondItem="8Om-aO-rP6" secondAttribute="bottom" constant="13" id="FI1-1a-qeg"/>
@@ -1020,6 +1030,7 @@
                                                 <constraint firstItem="ipX-8C-Rvb" firstAttribute="top" secondItem="PL9-av-vm0" secondAttribute="top" constant="20" id="UOw-iU-c0v"/>
                                                 <constraint firstAttribute="trailing" secondItem="pIG-Y7-RPt" secondAttribute="trailing" constant="8" id="WGt-1w-U2G"/>
                                                 <constraint firstItem="aDD-KV-chi" firstAttribute="centerY" secondItem="pjR-3t-T1c" secondAttribute="centerY" id="YTs-C5-9Eo"/>
+                                                <constraint firstAttribute="trailing" secondItem="9u0-Gf-WAE" secondAttribute="trailing" constant="26" id="aSU-iN-gLa"/>
                                                 <constraint firstItem="aDD-KV-chi" firstAttribute="top" secondItem="pjR-3t-T1c" secondAttribute="top" id="dsn-Qt-BDf"/>
                                                 <constraint firstAttribute="bottom" secondItem="aDD-KV-chi" secondAttribute="bottom" constant="11" id="gzv-Yz-PrE"/>
                                                 <constraint firstItem="8Om-aO-rP6" firstAttribute="leading" secondItem="PL9-av-vm0" secondAttribute="leading" constant="8" id="kRU-Rx-ArL"/>
@@ -1032,6 +1043,7 @@
                                         <size key="customSize" width="414" height="313"/>
                                         <connections>
                                             <outlet property="countDishLbl" destination="pjR-3t-T1c" id="LFU-HU-v2W"/>
+                                            <outlet property="countLabel" destination="9u0-Gf-WAE" id="gzq-ZY-cXz"/>
                                             <outlet property="dishDescription" destination="T1l-Rz-Vgg" id="8eK-SJ-cPc"/>
                                             <outlet property="dishName" destination="pIG-Y7-RPt" id="84N-SY-ff9"/>
                                             <outlet property="dishesDetailLbl" destination="aDD-KV-chi" id="xdj-zk-yBr"/>

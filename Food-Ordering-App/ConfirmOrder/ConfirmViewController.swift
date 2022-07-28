@@ -29,10 +29,13 @@ class ConfirmViewController: UIViewController {
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
         _ = tapGestureRecognizer.view as! UICollectionView
         cartNameTxt.text = "Rustam Manafli"
+        PriceTxt.text = "10 Azn"
     }
     
     @IBAction func payAct(_ sender: Any) {
-        
+        let alert = UIAlertController(title: "Alert", message: "Paid", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
 

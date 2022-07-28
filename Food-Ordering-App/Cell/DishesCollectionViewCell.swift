@@ -10,6 +10,7 @@ import UIKit
 protocol DishesCollectionViewCellDelegate {
     func actionAddBasketItems(index: Int)
     func actionDishDetail(index: Int)
+    func actionCountDish(index: Int)
 }
 
 class DishesCollectionViewCell: UICollectionViewCell {
@@ -19,6 +20,7 @@ class DishesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var dishDescription: UILabel!
     @IBOutlet weak var countDishLbl: UIStepper!
     @IBOutlet weak var dishesDetailLbl: UIButton!
+    @IBOutlet weak var countLabel: UILabel!
     
     var delegate: DishesCollectionViewCellDelegate?
 
@@ -39,6 +41,7 @@ class DishesCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func countDishes(_ sender: Any) {
-        
+        delegate?.actionCountDish(index: tag)
+        //countLabel.text = String(sender.value)
     }
 }

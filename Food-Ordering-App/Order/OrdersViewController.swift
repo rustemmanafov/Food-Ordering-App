@@ -19,10 +19,9 @@ class OrdersViewController: UIViewController {
 
         addToBasketLbl.layer.cornerRadius = 10
     }
-    
+    // order add to basket
     func addToBasket(dish: DishesModel) {
         orders.append(dish)
-        
     }
     
     @IBAction func confirmOrderAct(_ sender: Any) {
@@ -31,7 +30,6 @@ class OrdersViewController: UIViewController {
         
         show(controller, sender: nil)
     }
-    
 }
 
 extension OrdersViewController: UITableViewDelegate, UITableViewDataSource {
