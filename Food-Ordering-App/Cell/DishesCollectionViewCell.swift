@@ -9,6 +9,7 @@ import UIKit
 
 protocol DishesCollectionViewCellDelegate {
     func actionAddBasketItems(index: Int)
+    func actionDishDetail(index: Int)
 }
 
 
@@ -36,7 +37,7 @@ class DishesCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func dishesDetailAct(_ sender: Any) {
-        
+        delegate?.actionDishDetail(index: tag)
     }
     
     @IBAction func countDishes(_ sender: Any) {

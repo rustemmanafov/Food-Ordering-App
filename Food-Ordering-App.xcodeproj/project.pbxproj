@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4667FD20288FDB41001BA5FE /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667FD1F288FDB41001BA5FE /* SearchTableViewCell.swift */; };
+		4667FD222892A87D001BA5FE /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667FD212892A87D001BA5FE /* CardCollectionViewCell.swift */; };
 		46BB6E87288D64780083DA3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6E86288D64780083DA3D /* AppDelegate.swift */; };
 		46BB6E89288D64780083DA3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6E88288D64780083DA3D /* SceneDelegate.swift */; };
 		46BB6E8E288D64780083DA3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46BB6E8C288D64780083DA3D /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		4667FD1F288FDB41001BA5FE /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		4667FD212892A87D001BA5FE /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		46BB6E83288D64780083DA3D /* Food-Ordering-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food-Ordering-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BB6E86288D64780083DA3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46BB6E88288D64780083DA3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				46BB6EE7288F0F6A0083DA3D /* StoreTableViewCell.swift */,
+				4667FD212892A87D001BA5FE /* CardCollectionViewCell.swift */,
 				46BB6EEB288F1B8A0083DA3D /* RestaurantCollectionViewCell.swift */,
 				46BB6EED288F1BA40083DA3D /* DishesCollectionViewCell.swift */,
 				4667FD1F288FDB41001BA5FE /* SearchTableViewCell.swift */,
@@ -372,6 +375,7 @@
 				46BB6EB0288D6D990083DA3D /* RestoranDetailsViewController.swift in Sources */,
 				46BB6E91288D64780083DA3D /* Food_Ordering_App.xcdatamodeld in Sources */,
 				46BB6ED5288E109B0083DA3D /* UserModel.swift in Sources */,
+				4667FD222892A87D001BA5FE /* CardCollectionViewCell.swift in Sources */,
 				46BB6EA2288D69D60083DA3D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

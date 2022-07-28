@@ -18,13 +18,13 @@ class HomeViewController: UIViewController, RestaurantCollectionViewCellDelegate
 
      jsonSetup()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
+        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
 
     }
     
-    @objc func addTapped() {
+ //   @objc func addTapped() {
         
-    }
+    //}
     
     func jsonSetup() {
 

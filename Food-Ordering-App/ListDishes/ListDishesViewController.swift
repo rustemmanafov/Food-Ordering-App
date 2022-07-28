@@ -8,6 +8,8 @@
 import UIKit
 
 class ListDishesViewController: UIViewController, DishesCollectionViewCellDelegate {
+    
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var dishModel = [DishesModel]()
@@ -24,6 +26,13 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
         navigationController?.show(controller, sender: nil)
     }
     
+    func orderDetail(index: Int) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "OrderDetailViewController") as! OrderDetailViewController
+        controller.orderDetail = dishModel[index]
+        controller.title = dishModel[index].name
+        navigationController?.show(controller, sender: nil)
+    }
+    
     }
     
 extension ListDishesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -37,7 +46,8 @@ extension ListDishesViewController: UICollectionViewDelegate, UICollectionViewDa
         cell.dishDescription.text = dishModel[indexPath.row].description
         cell.dishName.text = dishModel[indexPath.row].name
         cell.dishesImage.image = UIImage(named: dishModel[indexPath.row].image)
-       
+    
+        // For protocol codes
         cell.delegate = self
         cell.tag = indexPath.row
         
@@ -46,6 +56,10 @@ extension ListDishesViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func actionAddBasketItems(index: Int) {
         addToBasket(index: index)
+    }
+    
+    func actionDishDetail(index: Int) {
+        orderDetail(index: index)
     }
     
 }
