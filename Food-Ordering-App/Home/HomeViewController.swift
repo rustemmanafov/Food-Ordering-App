@@ -18,13 +18,15 @@ class HomeViewController: UIViewController, RestaurantCollectionViewCellDelegate
 
      jsonSetup()
         
-        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
+        title = "Food Delivery"
+        
+       // navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
 
     }
-    
- //   @objc func addTapped() {
-        
-    //}
+//
+//    @objc func addTapped() {
+//
+//    }
     
     func jsonSetup() {
 
@@ -33,13 +35,10 @@ class HomeViewController: UIViewController, RestaurantCollectionViewCellDelegate
             do{
                 restaurants = try JSONDecoder().decode([RestaurantModel].self, from: data)
                 collectionView.reloadData()
-
             }catch{
                 print(error.localizedDescription)
-
             }
         }
-
     }
     
     func navigate(index: Int) {
@@ -56,6 +55,11 @@ class HomeViewController: UIViewController, RestaurantCollectionViewCellDelegate
         navigationController?.show(controller, sender: nil)
     }
 
+    @IBAction func basketAct(_ sender: Any) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "OrdersViewController") as! OrdersViewController
+        
+        show(controller, sender: nil)
+    }
     
 }
 
@@ -88,7 +92,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func actionButtonCalled(index: Int) {
        navigate(index: index)
     }
-    
 
     func actionRestaurantDetailCalled(index: Int) {
         RestaurantDetailsCalled(index: index)

@@ -18,18 +18,13 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var editLabel: UIButton!
     @IBOutlet weak var logOutLabel: UIButton!
     
-    
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         editLabel.layer.cornerRadius = 10
         logOutLabel.layer.cornerRadius = 10
 
+        tabBarController?.tabBar.backgroundColor = .white
       
     }
     

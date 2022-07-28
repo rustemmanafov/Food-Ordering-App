@@ -10,12 +10,14 @@ import UIKit
 class OrdersViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addToBasketLbl: UIButton!
     
     var orders = [DishesModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        addToBasketLbl.layer.cornerRadius = 10
         
     }
     
