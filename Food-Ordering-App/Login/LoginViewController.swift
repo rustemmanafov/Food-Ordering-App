@@ -17,7 +17,6 @@ class LoginViewController: UIViewController {
     var users = [UserModel]()
     var jsonData = URL(string: "")
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,7 +43,6 @@ class LoginViewController: UIViewController {
         .foregroundColor: UIColor.black,
         .underlineStyle: NSUnderlineStyle.single.rawValue ]
     
-    
     func getDocumentsDirectoryUrl() -> URL{
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths[0]
@@ -57,7 +55,6 @@ class LoginViewController: UIViewController {
                 users = try JSONDecoder().decode([UserModel].self, from: data)
             } catch {
                 print(error.localizedDescription)
-
             }
         }
 
@@ -76,8 +73,6 @@ class LoginViewController: UIViewController {
         return false
     }
     
-    
-    
     @IBAction func signInAct(_ sender: Any) {
         jsonCalled()
         
@@ -87,14 +82,11 @@ class LoginViewController: UIViewController {
             let navigationController = UINavigationController(rootViewController: controller)
             navigationController.modalPresentationStyle = .overFullScreen
             present(navigationController, animated: true, completion: nil)
-            
         } else{
             let alert = UIAlertController(title: "Alert", message: "Something went wrong", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
             self.present(alert, animated: true, completion: nil)
-            
         }
-        
     }
     
     @IBAction func notRegisteredAct(_ sender: Any) {
@@ -105,6 +97,4 @@ class LoginViewController: UIViewController {
 
         
     }
-    
-   
 }

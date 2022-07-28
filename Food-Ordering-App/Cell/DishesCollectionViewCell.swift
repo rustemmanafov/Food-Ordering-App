@@ -12,7 +12,6 @@ protocol DishesCollectionViewCellDelegate {
     func actionDishDetail(index: Int)
 }
 
-
 class DishesCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var dishesImage: UIImageView!
@@ -23,7 +22,6 @@ class DishesCollectionViewCell: UICollectionViewCell {
     
     var delegate: DishesCollectionViewCellDelegate?
 
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         

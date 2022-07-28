@@ -34,8 +34,6 @@ class ConfirmViewController: UIViewController {
     @IBAction func payAct(_ sender: Any) {
         
     }
-    
-
 }
 
 extension ConfirmViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -49,7 +47,4 @@ extension ConfirmViewController: UICollectionViewDelegate, UICollectionViewDataS
         cell.cardImage.image = UIImage(named: cardArray[indexPath.row])
         return cell
     }
-    
-    
-    
 }

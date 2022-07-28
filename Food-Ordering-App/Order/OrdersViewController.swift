@@ -18,7 +18,6 @@ class OrdersViewController: UIViewController {
         super.viewDidLoad()
 
         addToBasketLbl.layer.cornerRadius = 10
-        
     }
     
     func addToBasket(dish: DishesModel) {
@@ -32,7 +31,6 @@ class OrdersViewController: UIViewController {
         
         show(controller, sender: nil)
     }
-    
     
 }
 

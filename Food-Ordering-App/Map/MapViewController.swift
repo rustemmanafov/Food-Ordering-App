@@ -40,9 +40,5 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         pin.title = "I am here"
         mapView.addAnnotation(pin)
         
-        
     }
-    
-
-   
 }

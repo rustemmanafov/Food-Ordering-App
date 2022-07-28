@@ -21,21 +21,17 @@ class HomeViewController: UIViewController, RestaurantCollectionViewCellDelegate
         title = "Food Delivery"
         
        // navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
-
     }
-//
 //    @objc func addTapped() {
-//
 //    }
     
     func jsonSetup() {
 
         if let jsonFile = Bundle.main.url(forResource: "Restaurant", withExtension: "json"), let data = try? Data(contentsOf: jsonFile){
-
-            do{
+            do {
                 restaurants = try JSONDecoder().decode([RestaurantModel].self, from: data)
                 collectionView.reloadData()
-            }catch{
+            } catch {
                 print(error.localizedDescription)
             }
         }
@@ -57,16 +53,13 @@ class HomeViewController: UIViewController, RestaurantCollectionViewCellDelegate
 
     @IBAction func basketAct(_ sender: Any) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "OrdersViewController") as! OrdersViewController
-        
+    
         show(controller, sender: nil)
     }
-    
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-   
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         restaurants.count
     }
     
@@ -81,13 +74,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         return cell
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let controller = storyboard?.instantiateViewController(withIdentifier: "ListDishesViewController") as! ListDishesViewController
-//
-//        show(controller, sender: nil)
-//    }
-    
     
     func actionButtonCalled(index: Int) {
        navigate(index: index)

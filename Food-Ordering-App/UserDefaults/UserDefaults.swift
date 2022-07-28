@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 // For Onboarding page UserDefaults
 extension UserDefaults {
     private enum UserDefaultsKeys: String {

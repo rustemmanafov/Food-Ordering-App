@@ -36,7 +36,7 @@ class OnboardingViewController: UIViewController {
             
             OnboardingSlide(title: "Quick Delivery", description: "Your orders will be delivered instantly irrespective of your location.", image: #imageLiteral(resourceName: "Slide 3"))
         ]
-        
+    
         pageControl.numberOfPages = slides.count
     }
     
@@ -55,7 +55,6 @@ class OnboardingViewController: UIViewController {
             collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }
     }
-    
 }
 
 extension OnboardingViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -77,7 +76,6 @@ extension OnboardingViewController: UICollectionViewDataSource, UICollectionView
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let width = scrollView.frame.width
         currentPage = Int(scrollView.contentOffset.x / width)
-        
     }
     
 }

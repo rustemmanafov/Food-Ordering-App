@@ -9,13 +9,10 @@ import UIKit
 
 class StoreTableViewCell: UITableViewCell {
 
-    
     @IBOutlet weak var dishImageView: UIImageView!
     @IBOutlet weak var dishName: UILabel!
     @IBOutlet weak var dishDescription: UILabel!
     @IBOutlet weak var dishCountLbl: UILabel!
-    
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,7 +22,6 @@ class StoreTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        
     }
 
 }

@@ -12,7 +12,6 @@ class OrderDetailViewController: UIViewController {
     @IBOutlet weak var orderDetailText: UITextView!
     @IBOutlet weak var orderDetailImage: UIImageView!
     
-    
     var orderDetail: DishesModel?
 
     override func viewDidLoad() {

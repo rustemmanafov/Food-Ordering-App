@@ -22,18 +22,14 @@ class ProfileViewController: UIViewController {
     var jsonData = URL(string: "")
     var users = [UserModel]()
 
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         editLabel.layer.cornerRadius = 10
         logOutLabel.layer.cornerRadius = 10
-
         tabBarController?.tabBar.backgroundColor = .white
       
         jsonCalled()
-
     }
     
     func setupUI() {
@@ -75,11 +71,11 @@ class ProfileViewController: UIViewController {
         }
     }
 
-    
     @IBAction func editAct(_ sender: Any) {
+        
     }
     
     @IBAction func logOutAct(_ sender: Any) {
+        
     }
-    
 }

@@ -12,16 +12,11 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-   
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
-
-  
-
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
@@ -30,15 +25,11 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         1
     }
     
-   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell", for: indexPath) as! SearchTableViewCell
         
         return cell
     }
-    
-    
-    
 }
 
 extension SearchViewController: UISearchBarDelegate {

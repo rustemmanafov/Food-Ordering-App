@@ -13,7 +13,6 @@ class RestoranDetailsViewController: UIViewController {
     @IBOutlet weak var restaurantDetailText: UITextView!
     @IBOutlet weak var showLocationLbl: UIButton!
     
-    
     var restaurantDetail: RestaurantModel?
     
     override func viewDidLoad() {
@@ -31,5 +30,4 @@ class RestoranDetailsViewController: UIViewController {
         let controller = storyboard?.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
         show(controller, sender: nil)
     }
-    
 }

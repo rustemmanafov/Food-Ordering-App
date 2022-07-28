@@ -9,12 +9,10 @@ import UIKit
 
 class ListDishesViewController: UIViewController, DishesCollectionViewCellDelegate {
     
-    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var dishModel = [DishesModel]()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
