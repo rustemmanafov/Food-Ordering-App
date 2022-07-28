@@ -18,6 +18,12 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var editLabel: UIButton!
     @IBOutlet weak var logOutLabel: UIButton!
     
+    var profile: UserModel?
+    var jsonData = URL(string: "")
+    var users = [UserModel]()
+
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,7 +32,49 @@ class ProfileViewController: UIViewController {
 
         tabBarController?.tabBar.backgroundColor = .white
       
+        jsonCalled()
+
     }
+    
+    func setupUI() {
+        firstNameTxt.text = profile?.firstName
+        lastNameTxt.text = profile?.lastName
+        emailTxt.text = profile?.email
+        passwordTxt.text = profile?.password
+        genderTxt.text = profile?.gender
+        ageTxt.text = profile?.gender
+    }
+    
+    func findLoggedUser() {
+        let loggedMail = UserDefaults.standard.string(forKey: "loggedMail")
+        
+        for user in users {
+            if(user.email == loggedMail) {
+                profile = user
+                setupUI()
+            }
+        }
+    }
+    
+    func getDocumentsDirectoryUrl() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
+    
+    func jsonCalled() {
+        jsonData = getDocumentsDirectoryUrl().appendingPathComponent("User.json")
+        if let file = jsonData, let data = try? Data(contentsOf: file) {
+            do {
+                users = try JSONDecoder().decode([UserModel].self, from: data)
+                findLoggedUser()
+            } catch {
+                print(error.localizedDescription)
+                print("error")
+            }
+        }
+    }
+
     
     @IBAction func editAct(_ sender: Any) {
     }
