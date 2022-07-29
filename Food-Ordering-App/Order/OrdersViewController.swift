@@ -12,13 +12,63 @@ class OrdersViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addToBasketLbl: UIButton!
     
+    let context = AppDelegate().persistentContainer.viewContext
+    var basketItems = [Basket]()
+
     var orders = [DishesModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         addToBasketLbl.layer.cornerRadius = 10
+        
+        fetch()
+       // jsonSetup()
     }
+    
+//    func jsonSetup() {
+//
+//        if let jsonFile = Bundle.main.url(forResource: "Restaurant", withExtension: "json"), let data = try? Data(contentsOf: jsonFile){
+//            do {
+//                orders = try JSONDecoder().decode([DishesModel].self, from: data)
+//                tableView.reloadData()
+//            } catch {
+//                print(error.localizedDescription)
+//            }
+//        }
+//    }
+    
+    func fetch() {
+        do{
+            basketItems = try context.fetch(Basket.fetchRequest())
+            basketItems.reverse()
+            tableView.reloadData()
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+    }
+    
+    func save(title: String) {
+        let model = Basket(context: context)
+        model.title = title
+        do {
+            try context.save()
+            fetch()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+//    func delete(index: Int) {
+//        context.delete(basketItems[index])
+//        do {
+//            try context.save()
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+//    }
+    
     // order add to basket
     func addToBasket(dish: DishesModel) {
         orders.append(dish)

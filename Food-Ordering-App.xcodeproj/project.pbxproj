@@ -11,6 +11,8 @@
 		4667FD222892A87D001BA5FE /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667FD212892A87D001BA5FE /* CardCollectionViewCell.swift */; };
 		4667FD272892C557001BA5FE /* 1621472600_214508.png in Resources */ = {isa = PBXBuildFile; fileRef = 4667FD252892C556001BA5FE /* 1621472600_214508.png */; };
 		4667FD282892C557001BA5FE /* classic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4667FD262892C557001BA5FE /* classic.jpg */; };
+		4667FD2B28942E4D001BA5FE /* List+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667FD2928942E4D001BA5FE /* List+CoreDataClass.swift */; };
+		4667FD2C28942E4D001BA5FE /* List+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667FD2A28942E4D001BA5FE /* List+CoreDataProperties.swift */; };
 		46BB6E87288D64780083DA3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6E86288D64780083DA3D /* AppDelegate.swift */; };
 		46BB6E89288D64780083DA3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BB6E88288D64780083DA3D /* SceneDelegate.swift */; };
 		46BB6E8E288D64780083DA3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46BB6E8C288D64780083DA3D /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		4667FD212892A87D001BA5FE /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		4667FD252892C556001BA5FE /* 1621472600_214508.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1621472600_214508.png; sourceTree = "<group>"; };
 		4667FD262892C557001BA5FE /* classic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = classic.jpg; sourceTree = "<group>"; };
+		4667FD2928942E4D001BA5FE /* List+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4667FD2A28942E4D001BA5FE /* List+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		46BB6E83288D64780083DA3D /* Food-Ordering-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food-Ordering-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BB6E86288D64780083DA3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46BB6E88288D64780083DA3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4667FD2D28942E5F001BA5FE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4667FD2A28942E4D001BA5FE /* List+CoreDataProperties.swift */,
+				4667FD2928942E4D001BA5FE /* List+CoreDataClass.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		46BB6E7A288D64780083DA3D = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +129,7 @@
 			children = (
 				46BB6E86288D64780083DA3D /* AppDelegate.swift */,
 				46BB6E88288D64780083DA3D /* SceneDelegate.swift */,
+				4667FD2D28942E5F001BA5FE /* CoreData */,
 				46BB6EE6288F0F400083DA3D /* Cell */,
 				46BB6EE5288ED4A60083DA3D /* TabBar */,
 				46BB6ED3288E0F3B0083DA3D /* UserDefaults */,
@@ -365,7 +379,9 @@
 				46BB6EB9288DD6450083DA3D /* LoginViewController.swift in Sources */,
 				46BB6EEC288F1B8A0083DA3D /* RestaurantCollectionViewCell.swift in Sources */,
 				46BB6EBB288DD91F0083DA3D /* OnboardingSlide.swift in Sources */,
+				4667FD2B28942E4D001BA5FE /* List+CoreDataClass.swift in Sources */,
 				46BB6ED7288E10AA0083DA3D /* DishesModel.swift in Sources */,
+				4667FD2C28942E4D001BA5FE /* List+CoreDataProperties.swift in Sources */,
 				46BB6EC9288E08BB0083DA3D /* UserDefaults.swift in Sources */,
 				46BB6E87288D64780083DA3D /* AppDelegate.swift in Sources */,
 				46BB6EB5288DD4500083DA3D /* OnboardingCollectionViewCell.swift in Sources */,
