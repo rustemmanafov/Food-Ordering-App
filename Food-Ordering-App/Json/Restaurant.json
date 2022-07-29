@@ -4,8 +4,8 @@
         "name": "Istanbul",
         "image": "Istanbul.jpg",
         "description":"Best Dishes at this Restaurant",
-        "coordinatex": "0.0",
-        "coordinatey": "0.0",
+        "coordinatex": "40.489813",
+        "coordinatey": "50.151089",
         "dishes": [
             {
                 "id": "1",
@@ -86,8 +86,8 @@
         "name": "Bulvar",
         "image": "Bulvar.jpg",
         "description": "Best Dishes at this Restaurant",
-        "coordinatex": "0.0",
-        "coordinatey": "0.0",
+        "coordinatex": "40.370804",
+        "coordinatey": "49.849686",
         "dishes": [
             {
                 "id": "1",
@@ -169,8 +169,8 @@
         "name":"Qebele",
         "image":"Qebele.jpg",
         "description":"Best Dishes at this Restaurant",
-        "coordinatex":"0.0",
-        "coordinatey":"0.0",
+        "coordinatex":"40.376823",
+        "coordinatey":"49.86518",
         "dishes": [
             {
                 "id": "1",
@@ -251,8 +251,8 @@
         "name":"Cinar",
         "image":"Cinar.jpg",
         "description":"Best Dishes at this Restaurant",
-        "coordinatex":"0.0",
-        "coordinatey":"0.0",
+        "coordinatex":"40.97842",
+        "coordinatey":"47.84995",
         "dishes": [
             {
                 "id": "1",
@@ -333,8 +333,8 @@
         "name": "Soul Kitchen",
         "image": "Soul Kitchen.jpg",
         "description": "Best Dishes at this Restaurant",
-        "coordinatex": "0.0",
-        "coordinatey": "0.0",
+        "coordinatex": "17.951782",
+        "coordinatey": "102.61894",
         "dishes": [
             {
                 "id": "1",

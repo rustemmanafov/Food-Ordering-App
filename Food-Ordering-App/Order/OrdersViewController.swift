@@ -69,9 +69,12 @@ class OrdersViewController: UIViewController {
 //        }
 //    }
     
+   
+    
     // order add to basket
     func addToBasket(dish: DishesModel) {
         orders.append(dish)
+        
     }
     
     @IBAction func confirmOrderAct(_ sender: Any) {

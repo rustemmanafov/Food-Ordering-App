@@ -28,6 +28,8 @@ class RestoranDetailsViewController: UIViewController {
     @IBAction func showLocation(_ sender: Any) {
         
         let controller = storyboard?.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+        controller.latitude = restaurantDetail?.coordinatex ?? ""
+        controller.longitude = restaurantDetail?.coordinatey ?? ""
         show(controller, sender: nil)
     }
 }
