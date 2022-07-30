@@ -12,15 +12,51 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
     @IBOutlet weak var collectionView: UICollectionView!
     
     var dishModel = [DishesModel]()
+    
+    let context = AppDelegate().persistentContainer.viewContext
+    var basketItems = [Basket]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fetch()
     }
+    
+   func fetch() {
+        do{
+            basketItems = try context.fetch(Basket.fetchRequest())
+            basketItems.reverse()
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+    }
+    
+    func save(title: String) {
+        let model = Basket(context: context)
+        model.title = title
+        do {
+            try context.save()
+            fetch()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+//    func delete(index: Int) {
+//        context.delete(basketItems[index])
+//        do {
+//            try context.save()
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+//    }
+    
     
     func addToBasket(index: Int) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "OrdersViewController") as! OrdersViewController
         controller.addToBasket(dish: dishModel[index])
+        self.save(title: "")
         navigationController?.show(controller, sender: nil)
     }
     
