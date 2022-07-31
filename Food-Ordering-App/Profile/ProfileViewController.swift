@@ -76,6 +76,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func logOutAct(_ sender: Any) {
-        
+        let controller = storyboard?.instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingViewController
+        show(controller, sender: nil)
     }
 }

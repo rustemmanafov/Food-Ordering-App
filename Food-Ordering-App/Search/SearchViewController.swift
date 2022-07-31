@@ -15,14 +15,17 @@ class SearchViewController: UIViewController {
     var searchRestaurant = [RestaurantModel]()
     var searchDishes = [DishesModel]()
     
+    var filteredData = [String]()
+    var searching = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         jsonSetup()
+        //filteredData = searchRestaurant
     }
     
     func jsonSetup() {
-
         if let jsonFile = Bundle.main.url(forResource: "Restaurant", withExtension: "json"), let data = try? Data(contentsOf: jsonFile){
             do {
                 searchRestaurant = try JSONDecoder().decode([RestaurantModel].self, from: data)
@@ -38,12 +41,20 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        searchRestaurant.count
+        if searching {
+           return filteredData.count
+        } else {
+         return searchRestaurant.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell", for: indexPath) as! SearchTableViewCell
-        cell.searchLabel.text = searchRestaurant[indexPath.row].name
+        if searching {
+            cell.searchLabel.text = filteredData[indexPath.row]
+        } else {
+            cell.searchLabel.text = searchRestaurant[indexPath.row].name
+        }
         return cell
     }
     
@@ -58,6 +69,16 @@ extension SearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 
-        // need to be write code
+        filteredData = searchRestaurant.filter({$0.String(prefix(searchText.count)) == searchText})
+        
+        searching = true
+        tableView.reloadData()
+        
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+        searchBar.text = ""
+        tableView.reloadData()
     }
 }

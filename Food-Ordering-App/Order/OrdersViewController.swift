@@ -22,6 +22,11 @@ class OrdersViewController: UIViewController {
        // jsonSetup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+
+    }
+    
+    
 //    func jsonSetup() {
 //
 //        if let jsonFile = Bundle.main.url(forResource: "Restaurant", withExtension: "json"), let data = try? Data(contentsOf: jsonFile){
@@ -35,9 +40,9 @@ class OrdersViewController: UIViewController {
 //    }
     
     // order add to basket
-    func addToBasket(dish: DishesModel) {
-        orders.append(dish)
-    }
+//    func addToBasket(dish: DishesModel) {
+//        orders.append(dish)
+//    }
     
     @IBAction func confirmOrderAct(_ sender: Any) {
         

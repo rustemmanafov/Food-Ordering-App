@@ -15,21 +15,20 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
     
     let context = AppDelegate().persistentContainer.viewContext
     var basketItems = [Basket]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         fetch()
     }
     
-   func fetch() {
+     func fetch() {
         do{
             basketItems = try context.fetch(Basket.fetchRequest())
             basketItems.reverse()
         } catch {
             print(error.localizedDescription)
         }
-        
     }
     
     func save(title: String) {
@@ -43,21 +42,18 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
         }
     }
     
-//    func delete(index: Int) {
-//        context.delete(basketItems[index])
-//        do {
-//            try context.save()
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//    }
+    //    func delete(index: Int) {
+    //        context.delete(basketItems[index])
+    //        do {
+    //            try context.save()
+    //        } catch {
+    //            print(error.localizedDescription)
+    //        }
+    //    }
     
     
     func addToBasket(index: Int) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "OrdersViewController") as! OrdersViewController
-        controller.addToBasket(dish: dishModel[index])
-        self.save(title: "")
-        navigationController?.show(controller, sender: nil)
+        save(title: String(index))
     }
     
     func orderDetail(index: Int) {
@@ -67,19 +63,20 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
         navigationController?.show(controller, sender: nil)
     }
     
+    // need to be write codes
     func dishCount(index: Int) {
         print("worked")
         
     }
     
+}
+
+extension ListDishesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        dishModel.count
     }
     
-extension ListDishesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-   
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-         dishModel.count
-    }
-   
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DishesCollectionViewCell", for: indexPath) as! DishesCollectionViewCell
         cell.dishDescription.text = dishModel[indexPath.row].description
