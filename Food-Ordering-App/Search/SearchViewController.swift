@@ -15,70 +15,80 @@ class SearchViewController: UIViewController {
     var searchRestaurant = [RestaurantModel]()
     var searchDishes = [DishesModel]()
     
-    var filteredData = [String]()
+    var data = ["alma", "heyva", "qarpiz"]
+    
+    var filteredData: [String]!
     var searching = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        jsonSetup()
-        //filteredData = searchRestaurant
+      //  jsonSetup()
+        
+    filteredData = data
+        
     }
     
-    func jsonSetup() {
-        if let jsonFile = Bundle.main.url(forResource: "Restaurant", withExtension: "json"), let data = try? Data(contentsOf: jsonFile){
-            do {
-                searchRestaurant = try JSONDecoder().decode([RestaurantModel].self, from: data)
-                tableView.reloadData()
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
-    }
+//    func jsonSetup() {
+//        if let jsonFile = Bundle.main.url(forResource: "Restaurant", withExtension: "json"), let data = try? Data(contentsOf: jsonFile){
+//            do {
+//                searchRestaurant = try JSONDecoder().decode([RestaurantModel].self, from: data)
+//                tableView.reloadData()
+//            } catch {
+//                print(error.localizedDescription)
+//            }
+//        }
+//    }
     
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if searching {
-           return filteredData.count
-        } else {
-         return searchRestaurant.count
-        }
+   
+        data.count
+//        if searching {
+//           return filteredData.count
+//        } else {
+//         return searchRestaurant.count
+//        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell", for: indexPath) as! SearchTableViewCell
-        if searching {
-            cell.searchLabel.text = filteredData[indexPath.row]
-        } else {
-            cell.searchLabel.text = searchRestaurant[indexPath.row].name
-        }
+
+                  cell.searchLabel.text = data[indexPath.row]
+     
+
+        //        if searching {
+//            cell.searchLabel.text = filteredData[indexPath.row]
+//        } else {
+//            cell.searchLabel.text = searchRestaurant[indexPath.row].name
+//        }
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "RestoranDetailsViewController") as! RestoranDetailsViewController
-        controller.restaurantDetail = searchRestaurant[indexPath.row]
-        show(controller, sender: nil)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let controller = storyboard?.instantiateViewController(withIdentifier: "RestoranDetailsViewController") as! RestoranDetailsViewController
+//        controller.restaurantDetail = searchRestaurant[indexPath.row]
+//        show(controller, sender: nil)
+//    }
 }
 
 extension SearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 
-        filteredData = searchRestaurant.filter({$0.String(prefix(searchText.count)) == searchText})
-        
+        filteredData = data.filter({ $0.contains(searchText)})
         searching = true
-        tableView.reloadData()
-        
+        self.tableView.reloadData()
+
     }
-    
+
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searching = false
         searchBar.text = ""
         tableView.reloadData()
     }
+    
 }
