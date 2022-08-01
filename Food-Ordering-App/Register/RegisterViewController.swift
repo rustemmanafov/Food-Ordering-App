@@ -26,7 +26,6 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
- 
         signUpTextField.layer.cornerRadius = 10
         pickerView.delegate = self
         pickerView.dataSource = self
