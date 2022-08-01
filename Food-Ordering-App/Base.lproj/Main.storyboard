@@ -148,14 +148,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4l-WF-Wdy">
-                                <rect key="frame" x="20" y="514" width="120.5" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Not Registered"/>
-                                <connections>
-                                    <action selector="notRegisteredAct:" destination="q7N-5V-Wzd" eventType="touchUpInside" id="W8N-wk-kRv"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="017-nI-1bW">
                                 <rect key="frame" x="140" y="453" width="134" height="31"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
@@ -167,6 +159,14 @@
                                     <action selector="signInAct:" destination="q7N-5V-Wzd" eventType="touchUpInside" id="xZV-BQ-dgv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4l-WF-Wdy">
+                                <rect key="frame" x="140" y="513" width="141" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Not Registered"/>
+                                <connections>
+                                    <action selector="notRegisteredAct:" destination="q7N-5V-Wzd" eventType="touchUpInside" id="W8N-wk-kRv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Qu-l2-LCS"/>
                         <color key="backgroundColor" red="0.14859803980741204" green="0.24202410007733915" blue="0.32979753282335067" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -175,16 +175,17 @@
                             <constraint firstItem="017-nI-1bW" firstAttribute="top" secondItem="iNe-EL-E0s" secondAttribute="bottom" constant="50" id="FAm-sd-h9M"/>
                             <constraint firstItem="74G-Gr-92j" firstAttribute="leading" secondItem="0Qu-l2-LCS" secondAttribute="leading" constant="20" id="Jpv-Vr-MtA"/>
                             <constraint firstItem="0Qu-l2-LCS" firstAttribute="trailing" secondItem="74G-Gr-92j" secondAttribute="trailing" constant="20" id="NLg-Cc-qmR"/>
+                            <constraint firstItem="L4l-WF-Wdy" firstAttribute="leading" secondItem="0Qu-l2-LCS" secondAttribute="leading" constant="140" id="OBJ-um-1JK"/>
                             <constraint firstItem="iNe-EL-E0s" firstAttribute="centerX" secondItem="017-nI-1bW" secondAttribute="centerX" id="Qa9-oc-Zza"/>
                             <constraint firstItem="iNe-EL-E0s" firstAttribute="width" secondItem="74G-Gr-92j" secondAttribute="width" id="Rb7-iA-l4h"/>
-                            <constraint firstItem="0Qu-l2-LCS" firstAttribute="bottom" secondItem="L4l-WF-Wdy" secondAttribute="bottom" constant="317" id="UbE-UD-Fba"/>
+                            <constraint firstItem="0Qu-l2-LCS" firstAttribute="trailing" secondItem="L4l-WF-Wdy" secondAttribute="trailing" constant="133" id="au9-TA-OrW"/>
+                            <constraint firstItem="L4l-WF-Wdy" firstAttribute="top" secondItem="017-nI-1bW" secondAttribute="bottom" constant="29" id="gIi-Bv-5ED"/>
                             <constraint firstItem="iNe-EL-E0s" firstAttribute="leading" secondItem="0Qu-l2-LCS" secondAttribute="leading" constant="20" id="iaE-qf-Ob3"/>
+                            <constraint firstItem="L4l-WF-Wdy" firstAttribute="width" secondItem="ywd-zn-8qJ" secondAttribute="width" multiplier="0.289855" constant="21" id="j9Y-zM-Fwr"/>
                             <constraint firstItem="017-nI-1bW" firstAttribute="leading" secondItem="0Qu-l2-LCS" secondAttribute="leading" constant="140" id="lHg-KO-869"/>
-                            <constraint firstItem="iNe-EL-E0s" firstAttribute="leading" secondItem="L4l-WF-Wdy" secondAttribute="leading" id="mjj-Pi-7vc"/>
                             <constraint firstItem="74G-Gr-92j" firstAttribute="top" secondItem="0Qu-l2-LCS" secondAttribute="top" constant="217" id="npl-wX-Skh"/>
                             <constraint firstItem="0Qu-l2-LCS" firstAttribute="trailing" secondItem="iNe-EL-E0s" secondAttribute="trailing" constant="20" id="ovd-xh-oOb"/>
                             <constraint firstItem="iNe-EL-E0s" firstAttribute="top" secondItem="74G-Gr-92j" secondAttribute="bottom" constant="30" id="raa-jF-ddX"/>
-                            <constraint firstItem="L4l-WF-Wdy" firstAttribute="leading" secondItem="0Qu-l2-LCS" secondAttribute="leading" constant="20" id="tEz-m7-13O"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="L0w-kp-KBS"/>
@@ -884,14 +885,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchTableViewCell" id="om1-Fj-ees" customClass="SearchTableViewCell" customModule="Food_Ordering_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="om1-Fj-ees" id="ZcU-V6-Exe">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIT-3m-BiQ">
-                                                    <rect key="frame" x="28" y="11" width="358" height="21.5"/>
+                                                    <rect key="frame" x="28" y="11" width="358" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

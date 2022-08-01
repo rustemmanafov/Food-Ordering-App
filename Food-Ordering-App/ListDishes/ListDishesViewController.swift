@@ -19,24 +19,14 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetch()
     }
-    
-     func fetch() {
-        do{
-            basketItems = try context.fetch(Basket.fetchRequest())
-            basketItems.reverse()
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-    
+
     func save(title: String) {
         let model = Basket(context: context)
         model.title = title
         do {
             try context.save()
-            fetch()
+            //fetch()
         } catch {
             print(error.localizedDescription)
         }
@@ -50,7 +40,6 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
     //            print(error.localizedDescription)
     //        }
     //    }
-    
     
     func addToBasket(index: Int) {
         save(title: String(index))
@@ -82,7 +71,6 @@ extension ListDishesViewController: UICollectionViewDelegate, UICollectionViewDa
         cell.dishDescription.text = dishModel[indexPath.row].description
         cell.dishName.text = dishModel[indexPath.row].name
         cell.dishesImage.image = UIImage(named: dishModel[indexPath.row].image)
-    
         // For protocol codes
         cell.delegate = self
         cell.tag = indexPath.row
