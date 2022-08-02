@@ -21,17 +21,19 @@ class OrdersViewController: UIViewController {
 
         addToBasketLbl.layer.cornerRadius = 10
        
-        fetch()
+       // fetch()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        fetch()
     }
     
     func fetch() {
        do {
            basketItems = try context.fetch(Basket.fetchRequest())
            basketItems.reverse()
+           tableView.reloadData()
+
        } catch {
            print(error.localizedDescription)
        }
@@ -53,14 +55,14 @@ class OrdersViewController: UIViewController {
 extension OrdersViewController: UITableViewDelegate, UITableViewDataSource {
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        orders.count
+        basketItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StoreTableViewCell", for: indexPath) as! StoreTableViewCell
-        cell.dishName.text = orders[indexPath.row].name
-        cell.dishDescription.text = orders[indexPath.row].description
-        cell.dishImageView.image = UIImage(named: orders[indexPath.row].image)
+        cell.dishName.text = basketItems[indexPath.row].title
+//        cell.dishDescription.text = basketItems[indexPath.row].description
+//        cell.dishImageView.image = UIImage(named: basketItems[indexPath.row])
         return cell
     }
     

@@ -41,8 +41,8 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
     //        }
     //    }
     
-    func addToBasket(index: Int) {
-        save(title: String(index))
+    func addToBasket(title: String) {
+        save(title: title)
     }
     
     func orderDetail(index: Int) {
@@ -79,7 +79,7 @@ extension ListDishesViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func actionAddBasketItems(index: Int) {
-        addToBasket(index: index)
+        addToBasket(title: dishModel[index].name)
     }
     
     func actionDishDetail(index: Int) {

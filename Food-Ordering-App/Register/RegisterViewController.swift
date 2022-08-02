@@ -65,11 +65,12 @@ class RegisterViewController: UIViewController {
     
     @IBAction func signUpAct(_ sender: Any) {
         
+        // add viewDidLoad
         jsonSetup()
         
         if firstNameTextField.text?.isEmpty == false && lastNameTextField.text?.isEmpty == false && emailTextField.text?.isEmpty == false && passwordTextField.text?.isEmpty == false && genderTextField.text?.isEmpty == false && ageTextField.text?.isEmpty == false {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        navigationController?.show(controller, sender: nil)
+      
+            navigationController?.popViewController(animated: true)
         }else{
             let alert = UIAlertController(title: "Alert", message: "Please fill fields", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
