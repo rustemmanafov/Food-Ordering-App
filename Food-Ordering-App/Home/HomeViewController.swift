@@ -25,6 +25,10 @@ class HomeViewController: UIViewController, RestaurantCollectionViewCellDelegate
 //    @objc func addTapped() {
 //    }
     
+    override func viewWillAppear(_ animated: Bool) {
+       // self.navigationController?.navigationBar.isHidden = true
+    }
+    
     func jsonSetup() {
 
         if let jsonFile = Bundle.main.url(forResource: "Restaurant", withExtension: "json"), let data = try? Data(contentsOf: jsonFile){
