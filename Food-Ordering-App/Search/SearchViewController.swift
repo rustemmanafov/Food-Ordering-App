@@ -21,10 +21,10 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        jsonSetup()
+        getRestaurantJson()
     }
     
-    func jsonSetup() {
+    func getRestaurantJson() {
         if let jsonFile = Bundle.main.url(forResource: "Restaurant", withExtension: "json"), let data = try? Data(contentsOf: jsonFile){
             do {
                 searchRestaurant = try JSONDecoder().decode([RestaurantModel].self, from: data)
@@ -37,14 +37,15 @@ class SearchViewController: UIViewController {
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
-    
+   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if searching {
             return filteredData.count
-        } else {
+        } else if searchBar.text == "" {
             return searchRestaurant.count
         }
+        return filteredData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -68,18 +69,16 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 extension SearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-
+       
         filteredData = searchRestaurant.filter{ $0.name.contains(searchText) }
-        searching = true
+        
+        if searchBar.text == "" {
+            searching = false
+        } else {
+            searching = true
+        }
         self.tableView.reloadData()
 
     }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        
-        searching = false
-        searchBar.text = ""
-        tableView.reloadData()
-    }
-    
+
 }

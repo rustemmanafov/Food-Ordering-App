@@ -19,12 +19,9 @@ class HomeViewController: UIViewController, RestaurantCollectionViewCellDelegate
      jsonSetup()
         
         title = "Food Delivery"
-        
-       // navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
+      
     }
-//    @objc func addTapped() {
-//    }
-    
+
     override func viewWillAppear(_ animated: Bool) {
        // self.navigationController?.navigationBar.isHidden = true
     }
@@ -57,7 +54,6 @@ class HomeViewController: UIViewController, RestaurantCollectionViewCellDelegate
 
     @IBAction func basketAct(_ sender: Any) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "OrdersViewController") as! OrdersViewController
-    
         show(controller, sender: nil)
     }
 }

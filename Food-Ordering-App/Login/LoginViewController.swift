@@ -49,7 +49,7 @@ class LoginViewController: UIViewController {
         return documentsDirectory
     }
     
-    func jsonCalled() {
+    func loginJson() {
         if let file = jsonData, let data = try? Data(contentsOf: file) {
             do {
                 users = try JSONDecoder().decode([UserModel].self, from: data)
@@ -57,7 +57,6 @@ class LoginViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
-
     }
     
     func checkUsers() -> Bool {
@@ -74,7 +73,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signInAct(_ sender: Any) {
-        jsonCalled()
+        loginJson()
         
         if checkUsers() {
             UserDefaults.standard.set(true, forKey: "isLoggedIn")  // FLAG
@@ -94,7 +93,6 @@ class LoginViewController: UIViewController {
        // controller.modalTransitionStyle = .flipHorizontal
         show(controller, sender: nil)
        // present(controller, animated: true, completion: nil)
-
         
     }
 }

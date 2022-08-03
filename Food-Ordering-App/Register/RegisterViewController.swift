@@ -35,6 +35,8 @@ class RegisterViewController: UIViewController {
         jsonFile = getDocumentsDirectoryUrl().appendingPathComponent("User.json")
 
         createDatePicker()
+        
+        genderTextField.text = "Male"
     }
     
     func createDatePicker() {
@@ -66,17 +68,17 @@ class RegisterViewController: UIViewController {
     @IBAction func signUpAct(_ sender: Any) {
         
         // add viewDidLoad
-        jsonSetup()
+        registerJson()
         
         if firstNameTextField.text?.isEmpty == false && lastNameTextField.text?.isEmpty == false && emailTextField.text?.isEmpty == false && passwordTextField.text?.isEmpty == false && genderTextField.text?.isEmpty == false && ageTextField.text?.isEmpty == false {
-      
+
+            // get to login vc without navigation item
             navigationController?.popViewController(animated: true)
         }else{
             let alert = UIAlertController(title: "Alert", message: "Please fill fields", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
                 self.present(alert, animated: true, completion: nil)
         }
-        
         
     }
     
@@ -86,7 +88,7 @@ class RegisterViewController: UIViewController {
         return documentsDirectory
     }
     
-    func jsonSetup() {
+    func registerJson() {
         if let file = jsonFile, let data = try? Data(contentsOf: file) {
             do {
                 users = try JSONDecoder().decode([UserModel].self, from: data)
