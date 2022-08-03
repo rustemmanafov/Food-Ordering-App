@@ -8,6 +8,8 @@
 import UIKit
 
 class StoreTableViewCell: UITableViewCell {
+    
+    var basketItems: Basket?
 
     @IBOutlet weak var dishImageView: UIImageView!
     @IBOutlet weak var dishName: UILabel!
@@ -16,10 +18,11 @@ class StoreTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-      
-    
+       
     }
+ 
     
+   
     
 
     override func setSelected(_ selected: Bool, animated: Bool) {

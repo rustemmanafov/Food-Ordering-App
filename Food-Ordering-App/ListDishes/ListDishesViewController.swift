@@ -9,8 +9,6 @@ import UIKit
 
 class ListDishesViewController: UIViewController, DishesCollectionViewCellDelegate {
    
-    
-    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var dishModel = [DishesModel]()
@@ -38,17 +36,10 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
         }
     }
     
-//        func delete(index: Int) {
-//            context.delete(basketItems[index])
-//            do {
-//                try context.save()
-//            } catch {
-//                print(error.localizedDescription)
-//            }
-//        }
-    
+
     func addToBasket(title: String, image: String, info: String, count: String) {
         save(title: title, image: image, info: info, count: count)
+        
     }
     
     func orderDetail(index: Int) {
@@ -58,9 +49,8 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
         navigationController?.show(controller, sender: nil)
     }
     
-    func dishCount(index: Int) {
-        
-    }
+//    func dishCount(index: Int) {
+//    }
     
 }
 
@@ -83,24 +73,26 @@ extension ListDishesViewController: UICollectionViewDelegate, UICollectionViewDa
         
         return cell
     }
-    
-    
+  
     func actionAddBasketItems(index: Int) {
        
         addToBasket(title: dishModel[index].name, image: dishModel[index].image, info: dishModel[index].description, count: dishModel[index].count)
-       
     }
     
     func actionDishDetail(index: Int) {
         orderDetail(index: index)
     }
     
-   
     func stepperButton(sender: DishesCollectionViewCell) {
         if let indexPath = collectionView.indexPath(for: sender){
                print(indexPath)
            }
+    
+        
     }
+    
+    
     
 }
 
+    
