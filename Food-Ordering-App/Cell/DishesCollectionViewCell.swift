@@ -10,7 +10,7 @@ import UIKit
 protocol DishesCollectionViewCellDelegate {
     func actionAddBasketItems(index: Int)
     func actionDishDetail(index: Int)
-    func actionCountDish(index: Int)
+    func stepperButton(sender: DishesCollectionViewCell)
 }
 
 class DishesCollectionViewCell: UICollectionViewCell {
@@ -32,6 +32,8 @@ class DishesCollectionViewCell: UICollectionViewCell {
         countDishLbl.maximumValue = 10
     }
     
+
+    
     @IBAction func addBasketBtn(_ sender: Any) {
         delegate?.actionAddBasketItems(index: tag)
     }
@@ -41,7 +43,10 @@ class DishesCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func countDishes(_ sender: Any) {
-        delegate?.actionCountDish(index: tag)
-        //countLabel.text = String(sender.value)
+        if delegate != nil {
+            delegate?.stepperButton(sender: self)
+            countLabel.text = "x \(Int(countDishLbl.value))"
+
+            }
     }
 }

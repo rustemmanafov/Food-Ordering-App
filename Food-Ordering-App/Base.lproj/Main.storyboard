@@ -816,8 +816,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dishCountLbl" destination="Z6A-z4-Mur" id="7uk-Yw-rHA"/>
-                                            <outlet property="dishDescription" destination="Z6A-z4-Mur" id="EfG-7n-riZ"/>
+                                            <outlet property="dishCountLbl" destination="Z6A-z4-Mur" id="nws-gg-HQD"/>
+                                            <outlet property="dishDescription" destination="UAX-53-9AU" id="rCz-UI-dFY"/>
                                             <outlet property="dishImageView" destination="ezo-sQ-AW4" id="JJr-zn-Ir5"/>
                                             <outlet property="dishName" destination="zhR-HZ-vqB" id="Nlk-gn-Qyv"/>
                                         </connections>

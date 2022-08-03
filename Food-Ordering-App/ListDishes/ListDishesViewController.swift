@@ -8,6 +8,8 @@
 import UIKit
 
 class ListDishesViewController: UIViewController, DishesCollectionViewCellDelegate {
+   
+    
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -21,9 +23,13 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
         
     }
 
-    func save(title: String) {
+    func save(title: String, image: String, info: String, count: String) {
         let model = Basket(context: context)
         model.title = title
+        model.image = image
+        model.info = info
+        model.count = count
+        
         do {
             try context.save()
             //fetch()
@@ -32,17 +38,17 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
         }
     }
     
-    //    func delete(index: Int) {
-    //        context.delete(basketItems[index])
-    //        do {
-    //            try context.save()
-    //        } catch {
-    //            print(error.localizedDescription)
-    //        }
-    //    }
+//        func delete(index: Int) {
+//            context.delete(basketItems[index])
+//            do {
+//                try context.save()
+//            } catch {
+//                print(error.localizedDescription)
+//            }
+//        }
     
-    func addToBasket(title: String) {
-        save(title: title)
+    func addToBasket(title: String, image: String, info: String, count: String) {
+        save(title: title, image: image, info: info, count: count)
     }
     
     func orderDetail(index: Int) {
@@ -52,9 +58,7 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
         navigationController?.show(controller, sender: nil)
     }
     
-    // need to be write codes
     func dishCount(index: Int) {
-        print("worked")
         
     }
     
@@ -71,6 +75,8 @@ extension ListDishesViewController: UICollectionViewDelegate, UICollectionViewDa
         cell.dishDescription.text = dishModel[indexPath.row].description
         cell.dishName.text = dishModel[indexPath.row].name
         cell.dishesImage.image = UIImage(named: dishModel[indexPath.row].image)
+        cell.countLabel.text = dishModel[indexPath.row].count
+
         // For protocol codes
         cell.delegate = self
         cell.tag = indexPath.row
@@ -78,16 +84,22 @@ extension ListDishesViewController: UICollectionViewDelegate, UICollectionViewDa
         return cell
     }
     
+    
     func actionAddBasketItems(index: Int) {
-        addToBasket(title: dishModel[index].name)
+       
+        addToBasket(title: dishModel[index].name, image: dishModel[index].image, info: dishModel[index].description, count: dishModel[index].count)
+       
     }
     
     func actionDishDetail(index: Int) {
         orderDetail(index: index)
     }
     
-    func actionCountDish(index: Int) {
-        dishCount(index: index)
+   
+    func stepperButton(sender: DishesCollectionViewCell) {
+        if let indexPath = collectionView.indexPath(for: sender){
+               print(indexPath)
+           }
     }
     
 }

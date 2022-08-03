@@ -33,7 +33,6 @@ class OrdersViewController: UIViewController {
            basketItems = try context.fetch(Basket.fetchRequest())
            basketItems.reverse()
            tableView.reloadData()
-
        } catch {
            print(error.localizedDescription)
        }
@@ -61,8 +60,10 @@ extension OrdersViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StoreTableViewCell", for: indexPath) as! StoreTableViewCell
         cell.dishName.text = basketItems[indexPath.row].title
-//        cell.dishDescription.text = basketItems[indexPath.row].description
-//        cell.dishImageView.image = UIImage(named: basketItems[indexPath.row])
+        cell.dishDescription.text = basketItems[indexPath.row].info
+        cell.dishImageView.image = UIImage(named: basketItems[indexPath.row].image ?? "")
+        cell.dishCountLbl.text = basketItems[indexPath.row].count
+
         return cell
     }
     
