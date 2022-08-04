@@ -10,7 +10,7 @@ import UIKit
 protocol DishesCollectionViewCellDelegate {
     func actionAddBasketItems(index: Int)
     func actionDishDetail(index: Int)
-    func stepperButton(sender: DishesCollectionViewCell)
+    func stepperButton(value: Int)
 }
 
 class DishesCollectionViewCell: UICollectionViewCell {
@@ -18,9 +18,9 @@ class DishesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var dishesImage: UIImageView!
     @IBOutlet weak var dishName: UILabel!
     @IBOutlet weak var dishDescription: UILabel!
-    @IBOutlet weak var countDishLbl: UIStepper!
     @IBOutlet weak var dishesDetailLbl: UIButton!
     @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var stepper: UIStepper!
     
     var delegate: DishesCollectionViewCellDelegate?
 
@@ -28,8 +28,8 @@ class DishesCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
         dishesDetailLbl.layer.cornerRadius = 10
-        countDishLbl.minimumValue = 0
-        countDishLbl.maximumValue = 10
+        stepper.minimumValue = 1
+        stepper.maximumValue = 10
     }
     
 
@@ -42,11 +42,12 @@ class DishesCollectionViewCell: UICollectionViewCell {
         delegate?.actionDishDetail(index: tag)
     }
     
-    @IBAction func countDishes(_ sender: Any) {
+    @IBAction func stepperAction(_ sender: Any) {
         if delegate != nil {
-            delegate?.stepperButton(sender: self)
-            countLabel.text = "x \(Int(countDishLbl.value))"
+            delegate?.stepperButton(value: Int(stepper.value))
+            countLabel.text = "x \(Int(stepper.value))"
 
             }
     }
+   
 }

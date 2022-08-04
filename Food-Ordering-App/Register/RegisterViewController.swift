@@ -37,6 +37,7 @@ class RegisterViewController: UIViewController {
         createDatePicker()
         
         genderTextField.text = "Male"
+
     }
     
     func createDatePicker() {
@@ -97,7 +98,9 @@ class RegisterViewController: UIViewController {
                 print(error.localizedDescription)
             }
         } else {
-            writeToFile()
+           // writeToFile()
+            print("Something went wrong")
+            // bu silinmelidi
         }
     }
     

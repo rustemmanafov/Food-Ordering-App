@@ -8,7 +8,7 @@
 import UIKit
 
 class ListDishesViewController: UIViewController, DishesCollectionViewCellDelegate {
-   
+  
     @IBOutlet weak var collectionView: UICollectionView!
     
     var dishModel = [DishesModel]()
@@ -16,17 +16,20 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
     let context = AppDelegate().persistentContainer.viewContext
     var basketItems = [Basket]()
     
+    // for add stepper count
+    var dishCount = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
 
-    func save(title: String, image: String, info: String, count: String) {
+    func save(title: String, image: String, info: String) {
         let model = Basket(context: context)
         model.title = title
         model.image = image
         model.info = info
-        model.count = count
+        model.count = String(dishCount)
         
         do {
             try context.save()
@@ -36,9 +39,8 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
         }
     }
     
-
-    func addToBasket(title: String, image: String, info: String, count: String) {
-        save(title: title, image: image, info: info, count: count)
+    func addToBasket(title: String, image: String, info: String) {
+        save(title: title, image: image, info: info)
         
     }
     
@@ -51,7 +53,7 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
     
 //    func dishCount(index: Int) {
 //    }
-    
+
 }
 
 extension ListDishesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -76,19 +78,15 @@ extension ListDishesViewController: UICollectionViewDelegate, UICollectionViewDa
   
     func actionAddBasketItems(index: Int) {
        
-        addToBasket(title: dishModel[index].name, image: dishModel[index].image, info: dishModel[index].description, count: dishModel[index].count)
+        addToBasket(title: dishModel[index].name, image: dishModel[index].image, info: dishModel[index].description)
     }
     
     func actionDishDetail(index: Int) {
         orderDetail(index: index)
     }
     
-    func stepperButton(sender: DishesCollectionViewCell) {
-        if let indexPath = collectionView.indexPath(for: sender){
-               print(indexPath)
-           }
-    
-        
+    func stepperButton(value: Int) {
+        dishCount = value
     }
     
     

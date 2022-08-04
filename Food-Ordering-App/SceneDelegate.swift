@@ -23,17 +23,37 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //TODO: setup root view controller
         
         if UserDefaults.standard.bool(forKey: "isLoggedIn") {
-            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
-            let navigationController = UINavigationController(rootViewController: controller)
             
-            window?.rootViewController = navigationController
+//            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+//            let navigationController = UINavigationController(rootViewController: controller)
+//            window?.rootViewController = navigationController
+            
+            navigateToTabBar()
         } else {
-            let navigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingViewController
-            window?.rootViewController = navigationController
+            navigateToOnboarding()
+            
+//            let navigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingViewController
+//            window?.rootViewController = navigationController
+            
         }
         window?.makeKeyAndVisible()
     }
-
+    
+    // for logout
+    func navigateToTabBar() {
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+        let navigationController = UINavigationController(rootViewController: controller)
+        
+        window?.rootViewController = navigationController
+    }
+    // for logout
+   func navigateToOnboarding() {
+       let navigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingViewController
+       window?.rootViewController = navigationController
+    }
+    
+    
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

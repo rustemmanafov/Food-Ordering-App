@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
         jsonData = getDocumentsDirectoryUrl().appendingPathComponent("User.json")
 
         // auto filling textfields when opening login view
-        emailTextField.text = "rustem@mail.com"
+        emailTextField.text = "rustem@gmail.com"
         passwordTextField.text = "12345"
     }
     

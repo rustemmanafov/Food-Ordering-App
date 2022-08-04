@@ -8,7 +8,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    
     @IBOutlet weak var firstNameTxt: UITextField!
     @IBOutlet weak var lastNameTxt: UITextField!
     @IBOutlet weak var emailTxt: UITextField!
@@ -21,14 +21,14 @@ class ProfileViewController: UIViewController {
     var profile: UserModel?
     var jsonData = URL(string: "")
     var users = [UserModel]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         editLabel.layer.cornerRadius = 10
         logOutLabel.layer.cornerRadius = 10
         tabBarController?.tabBar.backgroundColor = .white
-      
+        
         jsonCalled()
     }
     
@@ -70,13 +70,19 @@ class ProfileViewController: UIViewController {
             }
         }
     }
-
+    
     @IBAction func editAct(_ sender: Any) {
         
     }
     
     @IBAction func logOutAct(_ sender: Any) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingViewController
-        show(controller, sender: nil)
+        
+        // for logout
+        let sceneDelegate = SceneDelegate()
+        sceneDelegate.navigateToOnboarding()
+        UserDefaults.standard.set(false, forKey: "isLoggedIn")
+        
+        let controller = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        navigationController?.show(controller, sender: nil)
     }
 }
