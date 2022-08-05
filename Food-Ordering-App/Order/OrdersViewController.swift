@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class OrdersViewController: UIViewController {
     
@@ -17,13 +18,13 @@ class OrdersViewController: UIViewController {
     let context = AppDelegate().persistentContainer.viewContext
     var basketItems = [Basket]()
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addToBasketLbl.layer.cornerRadius = 10
             
-       //orderPrice.text = 
+       // orderPrice.text =
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,6 +45,7 @@ class OrdersViewController: UIViewController {
         context.delete(basketItems[index])
         do {
             try context.save()
+            ProgressHUD.showSuccess()
         } catch {
             print(error.localizedDescription)
         }

@@ -44,7 +44,8 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
     
     func addToBasket(title: String, image: String, info: String, price: String) {
         save(title: title, image: image, info: info, price: price)
-        
+        ProgressHUD.showSucceed()
+
     }
     
     func orderDetail(index: Int) {
@@ -53,8 +54,6 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
         controller.title = dishModel[index].name
         navigationController?.show(controller, sender: nil)
     }
-
-    
 }
 
 extension ListDishesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
