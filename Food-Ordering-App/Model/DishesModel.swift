@@ -13,4 +13,5 @@ struct DishesModel: Codable {
     let image: String
     let count: String
     let description: String
+    let price: String
 }

@@ -18,18 +18,20 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
     
     // for add stepper count
     var dishCount = 0
+   // var dishPrice = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
 
-    func save(title: String, image: String, info: String) {
+    func save(title: String, image: String, info: String, price: String) {
         let model = Basket(context: context)
         model.title = title
         model.image = image
         model.info = info
         model.count = String(dishCount)
+        model.price = price
         
         do {
             try context.save()
@@ -39,8 +41,8 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
         }
     }
     
-    func addToBasket(title: String, image: String, info: String) {
-        save(title: title, image: image, info: info)
+    func addToBasket(title: String, image: String, info: String, price: String) {
+        save(title: title, image: image, info: info, price: price)
         
     }
     
@@ -50,10 +52,8 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
         controller.title = dishModel[index].name
         navigationController?.show(controller, sender: nil)
     }
-    
-//    func dishCount(index: Int) {
-//    }
 
+    
 }
 
 extension ListDishesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -68,6 +68,7 @@ extension ListDishesViewController: UICollectionViewDelegate, UICollectionViewDa
         cell.dishName.text = dishModel[indexPath.row].name
         cell.dishesImage.image = UIImage(named: dishModel[indexPath.row].image)
         cell.countLabel.text = dishModel[indexPath.row].count
+        cell.priceLabel.text = dishModel[indexPath.row].price
 
         // For protocol codes
         cell.delegate = self
@@ -78,7 +79,7 @@ extension ListDishesViewController: UICollectionViewDelegate, UICollectionViewDa
   
     func actionAddBasketItems(index: Int) {
        
-        addToBasket(title: dishModel[index].name, image: dishModel[index].image, info: dishModel[index].description)
+        addToBasket(title: dishModel[index].name, image: dishModel[index].image, info: dishModel[index].description, price: dishModel[index].price)
     }
     
     func actionDishDetail(index: Int) {

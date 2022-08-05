@@ -13,6 +13,7 @@
                 "image": "Kabab.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "2",
@@ -20,6 +21,7 @@
                 "image": "Burger.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "3",
@@ -27,6 +29,7 @@
                 "image": "Buglama.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "4",
@@ -34,6 +37,7 @@
                 "image": "Piti.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "5",
@@ -41,6 +45,7 @@
                 "image": "Dovga.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "6",
@@ -48,6 +53,7 @@
                 "image": "Dolma.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "7",
@@ -55,6 +61,7 @@
                 "image": "Baliq.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "8",
@@ -62,6 +69,7 @@
                 "image": "Qayganaq.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "9",
@@ -69,6 +77,7 @@
                 "image": "Piroq.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "10",
@@ -76,6 +85,7 @@
                 "image": "Pizza.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "11",
@@ -83,6 +93,7 @@
                 "image": "Lobster.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "12",
@@ -90,6 +101,7 @@
                 "image": "Desert.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
         ]
     },
@@ -107,6 +119,7 @@
                 "image": "Kabab.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "2",
@@ -114,6 +127,7 @@
                 "image": "Burger.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "3",
@@ -121,6 +135,7 @@
                 "image": "Buglama.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "4",
@@ -128,6 +143,7 @@
                 "image": "Piti.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "5",
@@ -135,6 +151,7 @@
                 "image": "Dovga.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "6",
@@ -142,6 +159,7 @@
                 "image": "Dolma.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "7",
@@ -149,6 +167,7 @@
                 "image": "Baliq.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "8",
@@ -156,6 +175,7 @@
                 "image": "Qayganaq.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "9",
@@ -163,6 +183,7 @@
                 "image": "Piroq.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "10",
@@ -170,6 +191,7 @@
                 "image": "Pizza.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "11",
@@ -177,6 +199,7 @@
                 "image": "Lobster.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "12",
@@ -184,6 +207,7 @@
                 "image": "Desert.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
         ]
         
@@ -202,6 +226,7 @@
                 "image": "Kabab.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "2",
@@ -209,6 +234,7 @@
                 "image": "Burger.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "3",
@@ -216,6 +242,7 @@
                 "image": "Buglama.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "4",
@@ -223,6 +250,7 @@
                 "image": "Piti.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "5",
@@ -230,6 +258,7 @@
                 "image": "Dovga.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "6",
@@ -237,6 +266,7 @@
                 "image": "Dolma.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "7",
@@ -244,6 +274,7 @@
                 "image": "Baliq.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "8",
@@ -251,6 +282,7 @@
                 "image": "Qayganaq.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "9",
@@ -258,6 +290,7 @@
                 "image": "Piroq.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "10",
@@ -265,6 +298,7 @@
                 "image": "Pizza.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "11",
@@ -272,6 +306,7 @@
                 "image": "Lobster.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "12",
@@ -279,6 +314,7 @@
                 "image": "Desert.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
         ]
     },
@@ -296,6 +332,7 @@
                 "image": "Kabab.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "2",
@@ -303,6 +340,7 @@
                 "image": "Burger.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "3",
@@ -310,6 +348,7 @@
                 "image": "Buglama.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "4",
@@ -317,6 +356,7 @@
                 "image": "Piti.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "5",
@@ -324,6 +364,7 @@
                 "image": "Dovga.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "6",
@@ -331,6 +372,7 @@
                 "image": "Dolma.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "7",
@@ -338,6 +380,7 @@
                 "image": "Baliq.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "8",
@@ -345,6 +388,7 @@
                 "image": "Qayganaq.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "9",
@@ -352,6 +396,7 @@
                 "image": "Piroq.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "10",
@@ -359,6 +404,7 @@
                 "image": "Pizza.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "11",
@@ -366,6 +412,7 @@
                 "image": "Lobster.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "12",
@@ -373,6 +420,7 @@
                 "image": "Desert.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
         ]
     },
@@ -390,6 +438,7 @@
                 "image": "Kabab.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "2",
@@ -397,6 +446,7 @@
                 "image": "Burger.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "3",
@@ -404,6 +454,7 @@
                 "image": "Buglama.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "4",
@@ -411,6 +462,7 @@
                 "image": "Piti.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "5",
@@ -418,6 +470,7 @@
                 "image": "Dovga.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "6",
@@ -425,6 +478,7 @@
                 "image": "Dolma.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "7",
@@ -432,6 +486,7 @@
                 "image": "Baliq.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "8",
@@ -439,6 +494,7 @@
                 "image": "Qayganaq.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "9",
@@ -446,6 +502,7 @@
                 "image": "Piroq.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "10",
@@ -453,6 +510,7 @@
                 "image": "Pizza.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "11",
@@ -460,6 +518,7 @@
                 "image": "Lobster.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
             {
                 "id": "12",
@@ -467,6 +526,7 @@
                 "image": "Desert.jpg",
                 "description": "Delicious",
                 "count": "",
+                "price": "5 azn",
             },
         ]
     }

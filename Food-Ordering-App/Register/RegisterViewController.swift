@@ -100,7 +100,6 @@ class RegisterViewController: UIViewController {
         } else {
            // writeToFile()
             print("Something went wrong")
-            // bu silinmelidi
         }
     }
     

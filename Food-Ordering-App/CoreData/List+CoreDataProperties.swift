@@ -20,6 +20,7 @@ extension Basket {
     @NSManaged public var image: String?
     @NSManaged public var info: String?
     @NSManaged public var count: String?
+    @NSManaged public var price: String?
 
 }
 

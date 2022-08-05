@@ -21,6 +21,7 @@ class DishesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var dishesDetailLbl: UIButton!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var stepper: UIStepper!
+    @IBOutlet weak var priceLabel: UILabel!
     
     var delegate: DishesCollectionViewCellDelegate?
 
@@ -28,11 +29,9 @@ class DishesCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
         dishesDetailLbl.layer.cornerRadius = 10
-        stepper.minimumValue = 1
+        stepper.minimumValue = 0
         stepper.maximumValue = 10
     }
-    
-
     
     @IBAction func addBasketBtn(_ sender: Any) {
         delegate?.actionAddBasketItems(index: tag)
@@ -46,7 +45,6 @@ class DishesCollectionViewCell: UICollectionViewCell {
         if delegate != nil {
             delegate?.stepperButton(value: Int(stepper.value))
             countLabel.text = "x \(Int(stepper.value))"
-
             }
     }
    

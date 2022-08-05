@@ -11,18 +11,19 @@ class OrdersViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addToBasketLbl: UIButton!
+    @IBOutlet weak var orderPrice: UILabel!
     
     var orders = [DishesModel]()
     let context = AppDelegate().persistentContainer.viewContext
     var basketItems = [Basket]()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addToBasketLbl.layer.cornerRadius = 10
-        
-        // fetch()
-        
+            
+       //orderPrice.text = 
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,8 +73,8 @@ extension OrdersViewController: UITableViewDelegate, UITableViewDataSource {
         cell.dishName.text = basketItems[indexPath.row].title
         cell.dishDescription.text = basketItems[indexPath.row].info
         cell.dishImageView.image = UIImage(named: basketItems[indexPath.row].image ?? "")
-        cell.dishCountLbl.text = basketItems[indexPath.row].count
-
+        cell.dishCountLbl.text = (basketItems[indexPath.row].count ?? "") + " pcs"
+        cell.dishPriceLbl.text = basketItems[indexPath.row].price
         
         return cell
     }
