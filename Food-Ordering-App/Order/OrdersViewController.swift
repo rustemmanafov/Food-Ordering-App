@@ -13,7 +13,7 @@ class OrdersViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addToBasketLbl: UIButton!
     @IBOutlet weak var orderPrice: UILabel!
-    
+  
     var orders = [DishesModel]()
     let context = AppDelegate().persistentContainer.viewContext
     var basketItems = [Basket]()
@@ -24,7 +24,9 @@ class OrdersViewController: UIViewController {
         
         addToBasketLbl.layer.cornerRadius = 10
             
-       // orderPrice.text =
+        //orderPrice.text =  dishPriceLbl.text
+        
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {

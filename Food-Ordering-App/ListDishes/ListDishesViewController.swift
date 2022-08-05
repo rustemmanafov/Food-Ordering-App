@@ -19,7 +19,6 @@ class ListDishesViewController: UIViewController, DishesCollectionViewCellDelega
     
     // for add stepper count
     var dishCount = 0
-   // var dishPrice = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
