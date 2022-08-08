@@ -17,6 +17,8 @@ class OrdersViewController: UIViewController {
     var orders = [DishesModel]()
     let context = AppDelegate().persistentContainer.viewContext
     var basketItems = [Basket]()
+    var basketItem: Basket?
+
     
     var totalBasketPrice = 0
     
@@ -24,8 +26,6 @@ class OrdersViewController: UIViewController {
         super.viewDidLoad()
         
         addToBasketLbl.layer.cornerRadius = 10
-            
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,9 +51,7 @@ class OrdersViewController: UIViewController {
             totalBasketPrice += totalPrice
             
         }
-        
-        orderPrice.text = String( totalBasketPrice) + " azn"
-
+        orderPrice.text = String(totalBasketPrice) + " azn"
     }
     
     func delete(index: Int) {
@@ -74,7 +72,7 @@ class OrdersViewController: UIViewController {
     @IBAction func confirmOrderAct(_ sender: Any) {
         
         let controller = storyboard?.instantiateViewController(withIdentifier: "ConfirmViewController") as! ConfirmViewController
-        
+        controller.totalPrice = orderPrice.text ?? ""
         show(controller, sender: nil)
     }
 }

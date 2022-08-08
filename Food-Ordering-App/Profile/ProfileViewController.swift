@@ -72,7 +72,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func editAct(_ sender: Any) {
-        
+        // need to be write codes
     }
     
     @IBAction func logOutAct(_ sender: Any) {

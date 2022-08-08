@@ -14,6 +14,9 @@ class ConfirmViewController: UIViewController {
     @IBOutlet weak var PriceTxt: UITextField!
     @IBOutlet weak var payLbl: UIButton!
     
+    var basketItems: Basket?
+    var totalPrice = ""
+    
     var cardArray = ["1621472600_214508.png", "classic.jpg"]
     
     override func viewDidLoad() {
@@ -24,12 +27,14 @@ class ConfirmViewController: UIViewController {
         // image tapped
         collectioView.isUserInteractionEnabled = true
         collectioView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:))))
+        
+        PriceTxt.text = totalPrice
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
         _ = tapGestureRecognizer.view as! UICollectionView
         cartNameTxt.text = "Rustam Manafli"
-        PriceTxt.text = "10 Azn"
+        
     }
     
     @IBAction func payAct(_ sender: Any) {
