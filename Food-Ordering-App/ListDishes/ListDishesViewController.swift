@@ -67,7 +67,7 @@ extension ListDishesViewController: UICollectionViewDelegate, UICollectionViewDa
         cell.dishName.text = dishModel[indexPath.row].name
         cell.dishesImage.image = UIImage(named: dishModel[indexPath.row].image)
         cell.countLabel.text = dishModel[indexPath.row].count
-        cell.priceLabel.text = dishModel[indexPath.row].price
+        cell.priceLabel.text = dishModel[indexPath.row].price + " azn"
 
         // For protocol codes
         cell.delegate = self

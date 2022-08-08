@@ -18,19 +18,19 @@ class OrdersViewController: UIViewController {
     let context = AppDelegate().persistentContainer.viewContext
     var basketItems = [Basket]()
     
-
+    var totalBasketPrice = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addToBasketLbl.layer.cornerRadius = 10
             
-        //orderPrice.text =  dishPriceLbl.text
-        
-    
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         fetch()
+        calculateTotalPrice()
     }
     
     func fetch() {
@@ -41,6 +41,19 @@ class OrdersViewController: UIViewController {
         } catch {
             print(error.localizedDescription)
         }
+    }
+    
+    func calculateTotalPrice (){
+        for order in basketItems {
+            let numberOfPiece = Int(order.count ?? "0") ?? 0
+            let price = Int(order.price ?? "0") ?? 0
+            let totalPrice = numberOfPiece * price
+            totalBasketPrice += totalPrice
+            
+        }
+        
+        orderPrice.text = String( totalBasketPrice) + " azn"
+
     }
     
     func delete(index: Int) {
@@ -77,8 +90,12 @@ extension OrdersViewController: UITableViewDelegate, UITableViewDataSource {
         cell.dishName.text = basketItems[indexPath.row].title
         cell.dishDescription.text = basketItems[indexPath.row].info
         cell.dishImageView.image = UIImage(named: basketItems[indexPath.row].image ?? "")
+       
+        let numberOfPiece = Int(basketItems[indexPath.row].count ?? "0") ?? 0
+        let price = Int(basketItems[indexPath.row].price ?? "0") ?? 0
+        let totalPrice = numberOfPiece * price
         cell.dishCountLbl.text = (basketItems[indexPath.row].count ?? "") + " pcs"
-        cell.dishPriceLbl.text = basketItems[indexPath.row].price
+        cell.dishPriceLbl.text = "\(totalPrice) azn"
         
         return cell
     }
@@ -98,5 +115,4 @@ extension OrdersViewController: UITableViewDelegate, UITableViewDataSource {
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
-    
 }
