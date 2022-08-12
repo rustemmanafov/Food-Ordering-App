@@ -35,7 +35,6 @@ class RegisterViewController: UIViewController {
         jsonFile = getDocumentsDirectoryUrl().appendingPathComponent("User.json")
 
         createDatePicker()
-        
         genderTextField.text = "Male"
 
     }
