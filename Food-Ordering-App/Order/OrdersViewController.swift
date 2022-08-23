@@ -18,7 +18,6 @@ class OrdersViewController: UIViewController {
     let context = AppDelegate().persistentContainer.viewContext
     var basketItems = [Basket]()
     var basketItem: Basket?
-
     
     var totalBasketPrice = 0
     

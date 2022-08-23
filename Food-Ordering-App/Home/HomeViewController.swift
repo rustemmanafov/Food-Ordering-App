@@ -19,7 +19,6 @@ class HomeViewController: UIViewController, RestaurantCollectionViewCellDelegate
      jsonSetup()
         
         title = "Food Delivery"
-      
     }
 
     override func viewWillAppear(_ animated: Bool) {
