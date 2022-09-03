@@ -21,7 +21,6 @@ class RegisterViewController: UIViewController {
     var pickerView = UIPickerView()
     var dataPicker = UIDatePicker()
     var genderArr = ["Male", "Female"]
-    var jsonFile = URL(string: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +30,6 @@ class RegisterViewController: UIViewController {
         pickerView.dataSource = self
         genderTextField.inputView = pickerView
         emailTextField.keyboardType = .emailAddress
-
-        jsonFile = getDocumentsDirectoryUrl().appendingPathComponent("User.json")
-
         createDatePicker()
         genderTextField.text = "Male"
 
@@ -66,15 +62,14 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func signUpAct(_ sender: Any) {
-        
-        // add viewDidLoad
-        registerJson()
-        
-        if firstNameTextField.text?.isEmpty == false && lastNameTextField.text?.isEmpty == false && emailTextField.text?.isEmpty == false && passwordTextField.text?.isEmpty == false && genderTextField.text?.isEmpty == false && ageTextField.text?.isEmpty == false {
+                
+        if let firstName = firstNameTextField.text, let lastName = lastNameTextField.text, let email = emailTextField.text, let password = passwordTextField.text, let gender = genderTextField.text, let age = ageTextField.text {
+                        
+            let user = UserModel(firstName: firstName, lastName: lastName, email: email, password: password, gender: gender, age: age)
+            users.append(user)
+            writeToJsonFile()
 
-            // get to login vc without navigation item
-            navigationController?.popViewController(animated: true)
-        }else{
+        } else {
             let alert = UIAlertController(title: "Alert", message: "Please fill fields", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
                 self.present(alert, animated: true, completion: nil)
@@ -82,35 +77,37 @@ class RegisterViewController: UIViewController {
         
     }
     
-    func getDocumentsDirectoryUrl() -> URL{
+    func getDocumentPath() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths[0]
         return documentsDirectory
     }
     
-    func registerJson() {
-        if let file = jsonFile, let data = try? Data(contentsOf: file) {
+    func getJsonFilePath() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory.appendingPathComponent("User.json")
+    }
+    
+    func readJsonFile() {
+        if let data =  try? Data(contentsOf: getJsonFilePath()) {
             do {
                 users = try JSONDecoder().decode([UserModel].self, from: data)
-                writeToFile()
             } catch {
                 print(error.localizedDescription)
             }
         } else {
-           // writeToFile()
-            print("Something went wrong")
+            print("no file")
         }
     }
     
-    func writeToFile() {
-        let user = UserModel(firstName: firstNameTextField.text!, lastName: lastNameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, gender: genderTextField.text!, age: ageTextField.text!)
-        users.append(user)
+    func writeToJsonFile() {
         do {
             let data = try JSONEncoder().encode(users)
-            try data.write(to: jsonFile!)
-            
+            try data.write(to: getJsonFilePath())
+            navigationController?.popViewController(animated: true)
         } catch {
-            print("Why dont work?")
+            print(error.localizedDescription)
         }
     }
 }

@@ -8,24 +8,24 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInOutlet: UIButton!
     @IBOutlet weak var notRegisteredOutlet: UIButton!
     
     var users = [UserModel]()
-    var jsonData = URL(string: "")
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        readJsonFile()
+        
         signInOutlet.layer.cornerRadius = 10
         underlineButton()
-        jsonData = getDocumentsDirectoryUrl().appendingPathComponent("User.json")
-
+        
         // auto filling textfields when opening login view
-        emailTextField.text = "rustem@gmail.com"
+        emailTextField.text = "rustam1@gmail.com"
         passwordTextField.text = "12345"
     }
     
@@ -43,45 +43,46 @@ class LoginViewController: UIViewController {
         .foregroundColor: UIColor.black,
         .underlineStyle: NSUnderlineStyle.single.rawValue ]
     
-    func getDocumentsDirectoryUrl() -> URL{
+    func getJsonFilePath() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths[0]
-        return documentsDirectory
+        return documentsDirectory.appendingPathComponent("User.json")
     }
     
-    func loginJson() {
-        if let file = jsonData, let data = try? Data(contentsOf: file) {
+    func readJsonFile() {
+        if let data =  try? Data(contentsOf: getJsonFilePath()) {
             do {
                 users = try JSONDecoder().decode([UserModel].self, from: data)
             } catch {
                 print(error.localizedDescription)
             }
+        } else {
+            print("No file")
         }
     }
     
-    func checkUsers() -> Bool {
-        var i = 0
-        while i < users.count {
-            if emailTextField.text == users[i].email && passwordTextField.text == users[i].password {
-                //for profile vc
-                UserDefaults.standard.setValue(users[i].email, forKey: "loggedMail")
-                return true
+    func checkUser() -> Bool{
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            for user in users {
+                if user.email == email && user.password == password {
+                    print("User logged in")
+                    UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                    return true
+                }
             }
-            i += 1
+        } else {
+            print("Fill the information")
         }
         return false
     }
     
     @IBAction func signInAct(_ sender: Any) {
-        loginJson()
-        
-        if checkUsers() {
-            UserDefaults.standard.set(true, forKey: "isLoggedIn")  // FLAG
+        if checkUser() {
             let controller = storyboard?.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
             let navigationController = UINavigationController(rootViewController: controller)
             navigationController.modalPresentationStyle = .overFullScreen
             present(navigationController, animated: true, completion: nil)
-        } else{
+        } else {
             let alert = UIAlertController(title: "Alert", message: "Something went wrong", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
             self.present(alert, animated: true, completion: nil)
@@ -90,9 +91,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func notRegisteredAct(_ sender: Any) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
-       // controller.modalTransitionStyle = .flipHorizontal
         show(controller, sender: nil)
-       // present(controller, animated: true, completion: nil)
         
     }
 }
