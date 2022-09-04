@@ -61,7 +61,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func checkUser() -> Bool{
+    func checkUser() -> Bool {
         if let email = emailTextField.text, let password = passwordTextField.text {
             for user in users {
                 if user.email == email && user.password == password {

@@ -18,8 +18,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var editLabel: UIButton!
     @IBOutlet weak var logOutLabel: UIButton!
     
-    var profile: UserModel?
-    var jsonData = URL(string: "")
+    //var profile: UserModel?
     var users = [UserModel]()
     
     override func viewDidLoad() {
@@ -29,45 +28,46 @@ class ProfileViewController: UIViewController {
         logOutLabel.layer.cornerRadius = 10
         tabBarController?.tabBar.backgroundColor = .white
         
-        jsonCalled()
+        readJsonFile()
+        
     }
     
     func setupUI() {
-        firstNameTxt.text = profile?.firstName
-        lastNameTxt.text = profile?.lastName
-        emailTxt.text = profile?.email
-        passwordTxt.text = profile?.password
-        genderTxt.text = profile?.gender
-        ageTxt.text = profile?.gender
+        firstNameTxt.text = users[0].firstName
+        lastNameTxt.text = users[0].lastName
+        emailTxt.text = users[0].email
+        passwordTxt.text = users[0].password
+        genderTxt.text = users[0].gender
+        ageTxt.text = users[0].age
     }
     
     func findLoggedUser() {
         let loggedMail = UserDefaults.standard.string(forKey: "loggedMail")
-        
+
         for user in users {
             if(user.email == loggedMail) {
-                profile = user
+                users.append(user)
                 setupUI()
             }
         }
     }
     
-    func getDocumentsDirectoryUrl() -> URL {
+    func getJsonFilePath() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths[0]
-        return documentsDirectory
+        return documentsDirectory.appendingPathComponent("User.json")
     }
     
-    func jsonCalled() {
-        jsonData = getDocumentsDirectoryUrl().appendingPathComponent("User.json")
-        if let file = jsonData, let data = try? Data(contentsOf: file) {
+    func readJsonFile() {
+        if let data =  try? Data(contentsOf: getJsonFilePath()) {
             do {
                 users = try JSONDecoder().decode([UserModel].self, from: data)
                 findLoggedUser()
             } catch {
                 print(error.localizedDescription)
-                print("error")
             }
+        } else {
+            print("no file")
         }
     }
     
