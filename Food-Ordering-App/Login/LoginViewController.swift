@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        readJsonFile()
+        
         
         signInOutlet.layer.cornerRadius = 10
         underlineButton()
@@ -28,7 +28,9 @@ class LoginViewController: UIViewController {
         emailTextField.text = "rustam1@gmail.com"
         passwordTextField.text = "12345"
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        readJsonFile()
+    }
     // Underline Button first code
     fileprivate func underlineButton() {
         let attributeString = NSMutableAttributedString(
@@ -66,6 +68,7 @@ class LoginViewController: UIViewController {
             for user in users {
                 if user.email == email && user.password == password {
                     print("User logged in")
+                    UserDefaults.standard.set(user.email, forKey: "loggedMail")
                     UserDefaults.standard.set(true, forKey: "isLoggedIn")
                     return true
                 }

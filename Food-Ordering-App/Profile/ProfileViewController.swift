@@ -29,7 +29,6 @@ class ProfileViewController: UIViewController {
         tabBarController?.tabBar.backgroundColor = .white
         
         readJsonFile()
-        
     }
     
     func setupUI() {
