@@ -69,7 +69,6 @@ class OrdersViewController: UIViewController {
     //    }
     
     @IBAction func confirmOrderAct(_ sender: Any) {
-        
         let controller = storyboard?.instantiateViewController(withIdentifier: "ConfirmViewController") as! ConfirmViewController
         controller.totalPrice = orderPrice.text ?? ""
         show(controller, sender: nil)
