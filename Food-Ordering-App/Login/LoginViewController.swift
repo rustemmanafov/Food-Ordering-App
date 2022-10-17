@@ -19,8 +19,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         signInOutlet.layer.cornerRadius = 10
         underlineButton()
         
