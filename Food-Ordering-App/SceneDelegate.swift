@@ -43,7 +43,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func navigateToTabBar() {
         let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
         let navigationController = UINavigationController(rootViewController: controller)
-        
         window?.rootViewController = navigationController
     }
     // for logout
