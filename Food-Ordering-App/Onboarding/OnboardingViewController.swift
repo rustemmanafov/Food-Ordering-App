@@ -40,7 +40,6 @@ class OnboardingViewController: UIViewController {
         pageControl.numberOfPages = slides.count
     }
     
-    
     @IBAction func nextBtnAction(_ sender: Any) {
         
         if currentPage == slides.count - 1 {
